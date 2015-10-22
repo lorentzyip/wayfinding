@@ -1,0 +1,46 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "tenantUrl",
+            "otherEntityName": "tenantUrl",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "tenant"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "1"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "floor",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "location",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "content",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "category",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151006092335",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

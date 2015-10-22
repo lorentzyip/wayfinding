@@ -2,6 +2,13 @@
 
 wayfinding was generated using JHipster, you can find documentation and help at [JHipster][].
 
+In order to regenerate the whole project
+	yo jhipster:languages
+	yo jhipster:entity tenant
+	yo jhipster:entity tenantUrl
+	yo jhipster:entity promotion
+
+
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
 1. [Node.js][]: We use Node to run a development web server and build the project.

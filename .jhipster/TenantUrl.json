@@ -1,0 +1,18 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "tenant",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "url",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151006093245",
+    "dto": "no",
+    "pagination": "pager"
+}
