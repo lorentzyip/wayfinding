@@ -1,0 +1,21 @@
+{
+    "wayfindingApp": {
+        "promotion" : {
+            "home": {
+                "title": "Promotions",
+                "createLabel": "Créer un nouveau Promotion",
+                "createOrEditLabel": "Créer ou éditer un Promotion"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Promotion {{ id }} ?"
+            },
+            "detail": {
+                "title": "Promotion"
+            },
+            "name": "Name",
+            "thumbnail": "Thumbnail",
+            "image": "Image"
+        }
+    }
+}
+

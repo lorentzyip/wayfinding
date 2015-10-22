@@ -6,6 +6,9 @@
             "home": "Accueil",
             "entities": {
                 "main": "Entités",
+                "tenant": "Tenant",
+                "tenantUrl": "TenantUrl",
+                "promotion": "Promotion",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -1,0 +1,48 @@
+
+<div>
+    <h2><span translate="wayfindingApp.promotion.detail.title">Promotion</span> {{promotion.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="wayfindingApp.promotion.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{promotion.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="wayfindingApp.promotion.thumbnail">Thumbnail</span>
+                </td>
+                <td>
+                    <img data-ng-src="{{'data:' + promotion.thumbnailContentType + ';base64,' + promotion.thumbnail}}" style="max-width: 100%;" ng-if="promotion.thumbnail"/>
+                    <div>{{promotion.thumbnailContentType}}  {{byteSize(promotion.thumbnail)}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="wayfindingApp.promotion.image">Image</span>
+                </td>
+                <td>
+                    <img data-ng-src="{{'data:' + promotion.imageContentType + ';base64,' + promotion.image}}" style="max-width: 100%;" ng-if="promotion.image"/>
+                    <div>{{promotion.imageContentType}}  {{byteSize(promotion.image)}}</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

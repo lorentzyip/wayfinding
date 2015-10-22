@@ -28,6 +28,7 @@ angular.module('wayfindingApp')
  */
     .constant('LANGUAGES', [
         'en', 'fr'
+        ,'zh-cn'
         //JHipster will add new languages here
     ]
 );

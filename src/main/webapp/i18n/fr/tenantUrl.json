@@ -1,0 +1,20 @@
+{
+    "wayfindingApp": {
+        "tenantUrl" : {
+            "home": {
+                "title": "TenantUrls",
+                "createLabel": "Créer un nouveau TenantUrl",
+                "createOrEditLabel": "Créer ou éditer un TenantUrl"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le TenantUrl {{ id }} ?"
+            },
+            "detail": {
+                "title": "TenantUrl"
+            },
+            "tenant": "Tenant",
+            "url": "Url"
+        }
+    }
+}
+
