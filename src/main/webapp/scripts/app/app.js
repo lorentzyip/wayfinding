@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate', 
+angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate',
                'ui.bootstrap', // for modal dialogs
     'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll'])
 
@@ -14,12 +14,12 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
             if (Principal.isIdentityResolved()) {
                 Auth.authorize();
             }
-            
+
             // Update the language
             Language.getCurrent().then(function (language) {
                 $translate.use(language);
             });
-            
+
         });
 
         $rootScope.$on('$stateChangeSuccess',  function(event, toState, toParams, fromState, fromParams) {
@@ -38,12 +38,12 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
             if (toState.data.pageTitle) {
                 titleKey = toState.data.pageTitle;
             }
-            
+
             $translate(titleKey).then(function (title) {
                 // Change window title with translated one
                 $window.document.title = title;
             });
-            
+
         });
 
         $rootScope.back = function() {
@@ -64,7 +64,7 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
         //Cache everything except rest api requests
         httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/, /.*protected.*/], true);
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/touch'); // changed from / to /touch for redirecting to touch
         $stateProvider.state('site', {
             'abstract': true,
             views: {
@@ -88,7 +88,7 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
         $httpProvider.interceptors.push('errorHandlerInterceptor');
         $httpProvider.interceptors.push('authExpiredInterceptor');
         $httpProvider.interceptors.push('notificationInterceptor');
-        
+
         // Initialize angular-translate
         $translateProvider.useLoader('$translatePartialLoader', {
             urlTemplate: 'i18n/{lang}/{part}.json'
@@ -102,5 +102,5 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
         tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
         tmhDynamicLocaleProvider.useCookieStorage();
         tmhDynamicLocaleProvider.storageKey('NG_TRANSLATE_LANG_KEY');
-        
+
     });

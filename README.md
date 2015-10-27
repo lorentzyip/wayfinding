@@ -3,10 +3,10 @@
 wayfinding was generated using JHipster, you can find documentation and help at [JHipster][].
 
 In order to regenerate the whole project
-	yo jhipster:languages
-	yo jhipster:entity tenant
-	yo jhipster:entity tenantUrl
-	yo jhipster:entity promotion
+   yo jhipster:languages
+   yo jhipster:entity tenant
+   yo jhipster:entity tenantUrl
+   yo jhipster:entity promotion
 
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
