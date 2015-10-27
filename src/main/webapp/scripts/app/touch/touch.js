@@ -26,5 +26,18 @@ angular.module('wayfindingApp')
                         return $translate.refresh();
                     }]
                 }
+            })
+            .state('welcome' , {
+                url: "/welcome",
+                data: {
+                    authorities: [],
+                    pageTitle: 'Welcome'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'templates/welcome.html',
+                        controller: 'TouchController'
+                    }
+                }
             });
     });

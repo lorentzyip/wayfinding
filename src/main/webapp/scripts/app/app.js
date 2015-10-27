@@ -64,7 +64,7 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
         //Cache everything except rest api requests
         httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/, /.*protected.*/], true);
 
-        $urlRouterProvider.otherwise('/touch'); // changed from / to /touch for redirecting to touch
+        $urlRouterProvider.otherwise('/welcome'); // changed from / to /touch for redirecting to touch
         $stateProvider.state('site', {
             'abstract': true,
             views: {
