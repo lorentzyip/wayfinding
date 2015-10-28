@@ -20,6 +20,18 @@ body {
     background-repeat: no-repeat;
 }
 
+#weather {
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    background-color: steelblue;
+    z-index: 1000;
+    color: white;
+}
+
 #bottom-shadow {
     position: absolute;
     width: 1920px;
@@ -101,4 +113,12 @@ body {
 }
 [ui-view].ng-leave-active {
     left: -100%;    /*final css for view transition out*/
+}
+
+a:hover, a:active, a:focus {
+    outline: none;
+}
+
+img {
+    border: 0;
 }
