@@ -15,6 +15,7 @@ module.exports = function (config) {
             'main/webapp/bower_components/modernizr/modernizr.js',
             'main/webapp/bower_components/jquery/dist/jquery.js',
             'main/webapp/bower_components/angular/angular.js',
+            'main/webapp/bower_components/angular-animate/angular-animate.js',
             'main/webapp/bower_components/angular-aria/angular-aria.js',
             'main/webapp/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
             'main/webapp/bower_components/angular-cache-buster/angular-cache-buster.js',
