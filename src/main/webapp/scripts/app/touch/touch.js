@@ -27,16 +27,29 @@ angular.module('wayfindingApp')
                     }]
                 }
             })
-            .state('welcome' , {
-                url: "/welcome",
+            .state('cover' , {
+                url: "/cover",
                 data: {
                     authorities: [],
                     pageTitle: 'Welcome'
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'templates/welcome.html',
+                        templateUrl: 'templates/cover.html',
                         controller: 'TouchController'
+                    }
+                }
+            })
+            .state('mainselection' , {
+                url: "/mainselection",
+                data: {
+                    authorities: [],
+                    pageTitle: 'Main Selection'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'templates/mainselection.html',
+                        //controller: 'TouchController'
                     }
                 }
             });

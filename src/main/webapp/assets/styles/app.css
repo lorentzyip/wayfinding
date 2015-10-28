@@ -1,0 +1,104 @@
+body {
+    background: url('../images/screen_bg.jpg');
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+
+#logo {
+    position: absolute;
+    width: 132px;
+    height: 88px;
+    top: 30px;
+    left: 30px;
+    border: 0;
+    z-index: 1000;
+    background-image: url("../images/Yunfu_L_side_logo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#bottom-shadow {
+    position: absolute;
+    width: 1920px;
+    height: 542px;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    background-image: url("../images/shadow_background_layer.png");
+    background-repeat: no-repeat;
+}
+
+.child-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#language-buttons-small {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+#content-mainselection {
+    position: absolute;
+    width: 1920px;
+    top: 299px;
+    left: 290px;
+}
+
+.selection-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.selection-panel {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+}
+
+.selection-button {
+    position: relative;
+    margin-top: 1px;
+    color: white;
+}
+
+.selection-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+[ui-view] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+[ui-view].ng-enter,
+[ui-view].ng-leave {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+[ui-view].ng-enter {
+    left: 100%;     /*initial css for view transition in*/
+}
+[ui-view].ng-leave {
+    left: 0%;        /*initial css for view transition out*/
+}
+[ui-view].ng-enter-active {
+    left: 0%;        /*final css for view transition in*/
+}
+[ui-view].ng-leave-active {
+    left: -100%;    /*final css for view transition out*/
+}

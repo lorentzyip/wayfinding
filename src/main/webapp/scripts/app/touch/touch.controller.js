@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('TouchController', function ($scope, $translate, $timeout, Auth) {
+    .controller('TouchController', function ($scope, $state, $translate, $timeout, Auth) {
         $scope.success = null;
         $scope.error = null;
         $scope.doNotMatch = null;
@@ -32,5 +32,18 @@ angular.module('wayfindingApp')
                     }
                 });
             }
+        };
+        
+        $scope.hideSmallLanguageButtons = function() {
+            return $state.is("cover");  
+        };
+        
+        $scope.setLanguageAndGo = function(languageKey) {
+            $scope.setLanguage(languageKey);
+            $state.go('mainselection');  
+        };
+        
+        $scope.setLanguage = function(languageKey) {
+            $scope.language = languageKey;
         };
     });

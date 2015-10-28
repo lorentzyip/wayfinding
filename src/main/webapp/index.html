@@ -15,15 +15,31 @@
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- endbuild -->
+        <!-- custom css -->
+        <link rel="stylesheet" href="assets/styles/app.css">
     </head>
     <body ng-app="wayfindingApp">
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="logo"></div>
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
         <div ng-hide="$state.current.name.substring(0, 5) == 'touch'" ui-view="navbar" ng-cloak=""></div>
         <div class="container">
             <div ui-view="content"></div>
+            <div id="bottom-shadow"></div>
+            <div id="language-buttons-small" ng-controller="TouchController" ng-hide="hideSmallLanguageButtons()">
+                <span style="margin-right:10px;">
+                    <a href ng-click="setLanguage('en')">
+                        <img src="assets/images/Btn_eng_sml.png">
+                    </a>
+                </span>
+                <span>
+                    <a href ng-click="setLanguage('zh-cn')">
+                        <img src="assets/images/Btn_chi_sml.png">
+                    </a>
+                </span>
+            </div>
         </div>
 
         <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
@@ -59,6 +75,7 @@
         <script src="bower_components/json3/lib/json3.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

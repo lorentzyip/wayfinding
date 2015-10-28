@@ -2,7 +2,7 @@
 
 angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate',
                'ui.bootstrap', // for modal dialogs
-    'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll'])
+    'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll', 'ngAnimate'])
 
     .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION) {
         $rootScope.ENV = ENV;
@@ -64,7 +64,7 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
         //Cache everything except rest api requests
         httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/, /.*protected.*/], true);
 
-        $urlRouterProvider.otherwise('/welcome'); // changed from / to /touch for redirecting to touch
+        $urlRouterProvider.otherwise('/cover'); // changed from / to /touch for redirecting to touch
         $stateProvider.state('site', {
             'abstract': true,
             views: {
