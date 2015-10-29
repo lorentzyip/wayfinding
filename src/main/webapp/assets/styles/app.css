@@ -149,6 +149,8 @@ img {
 .promotion-container img {
     width: 366px;
     height: 549px;
-    -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent));
+    margin: auto;
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent));
 }
