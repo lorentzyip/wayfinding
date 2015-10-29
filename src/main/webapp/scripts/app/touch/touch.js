@@ -39,18 +39,5 @@ angular.module('wayfindingApp')
                         controller: 'TouchController'
                     }
                 }
-            })
-            .state('mainselection' , {
-                url: "/mainselection",
-                data: {
-                    authorities: [],
-                    pageTitle: 'Main Selection'
-                },
-                views: {
-                    'content@': {
-                        templateUrl: 'templates/mainselection.html',
-                        //controller: 'TouchController'
-                    }
-                }
             });
     });
