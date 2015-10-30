@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('PromotionsController', function ($scope, $state, $translate, $timeout, $window) {
+    .controller('PromotionsController', function ($scope, $state, $translate, $timeout, $window, TouchService) {
         $scope.promotions = [];
-        
+
         // todo implement this function to get the real promotion data
         var getPromotions = function() {
             var promotions = [];
@@ -39,17 +39,26 @@ angular.module('wayfindingApp')
                 Name: "Angular3",
                 ImageUrl: "assets/images/promotions/lrg3.jpg"
             });
-            
+
             return promotions;
         };
-        
+
         var init = function() {
-            $scope.promotions = getPromotions();
+            //$scope.promotions = getPromotions();
+            $scope.loadAll()();
         };
-        
+
+        $scope.loadAll = function() {
+            TouchService.promotion.query({page: $scope.page, size: 20}, function(result, headers) {
+                for (var i = 0; i < result.length; i++) {
+                    $scope.tenants.push(result[i]);
+                }
+            });
+        };
+
         $scope.showPromotionDetails = function(promotionName) {
             $window.alert(promotionName);
         };
-        
+
         init();
     });
