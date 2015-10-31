@@ -74,6 +74,11 @@ body {
     padding: 10px;
 }
 
+#content-promotion {
+    width: 1024px;
+    height: 768px;
+}
+
 #promotions-slider-container {
     position: absolute;
     top: 190px;
@@ -153,4 +158,28 @@ img {
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.6);
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
     -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent));
+}
+
+.single-promotion-container {
+    width: 1280px;
+    height: 720px;
+}
+
+.single-promotion-container img {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+}
+
+.slick-dots li button:before {
+    font-size: 14px;
+}
+
+.ngdialog.ngdialog-theme-default.custom-width .ngdialog-content {
+    width: 1280px;
+}
+
+.ngdialog.ngdialog-theme-default {
+    padding-top: 160px;
+    padding-bottom: 0;
 }

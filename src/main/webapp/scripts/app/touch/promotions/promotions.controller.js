@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('PromotionsController', function ($scope, $state, $translate, $timeout, $window) {
+    .controller('PromotionsController', function ($scope, $state, $translate, $timeout, $window, ngDialog) {
         $scope.promotions = [];
         
         // todo implement this function to get the real promotion data
@@ -48,7 +48,11 @@ angular.module('wayfindingApp')
         };
         
         $scope.showPromotionDetails = function(promotionName) {
-            $window.alert(promotionName);
+            ngDialog.open({
+                template: 'templates/promotion.html',
+                className: 'ngdialog-theme-default custom-width',
+                closeByDocument: false
+            });
         };
         
         init();

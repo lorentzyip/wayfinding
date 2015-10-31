@@ -36,6 +36,7 @@ module.exports = function (config) {
             'main/webapp/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
             'main/webapp/bower_components/slick-carousel/slick/slick.min.js',
             'main/webapp/bower_components/angular-slick/dist/slick.js',
+            'main/webapp/bower_components/ng-dialog/js/ngDialog.js',
             'main/webapp/bower_components/angular-mocks/angular-mocks.js',
             // endbower
             'main/webapp/scripts/app/app.js',
