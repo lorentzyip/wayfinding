@@ -3,6 +3,7 @@
 angular.module('wayfindingApp')
     .config(function ($stateProvider) {
         $stateProvider
+            /*
             .state('touch', {
                 parent: 'site',
                 url: '/touch',
@@ -27,6 +28,7 @@ angular.module('wayfindingApp')
                     }]
                 }
             })
+            */
             .state('cover' , {
                 url: "/cover",
                 data: {

@@ -7,6 +7,62 @@ body {
     overflow: hidden;
 }
 
+.menu-buttons {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 1280px;
+    transform: translate(-50%, 0);
+}
+
+.menu-buttons.ng-hide-add, .menu-buttons.ng-hide-remove {
+  transition: 1s ease all;
+}
+
+.menu-buttons.ng-hide {
+    opacity:0;
+}
+
+.menu-button {
+    background-image: url('../images/Bottom_menu_02.png');
+    background-repeat: no-repeat;
+    float: left;
+    width: 256px;
+    height: 43px;
+    line-height: 43px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-family: Corbel;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#cover-logo {
+    text-align: center;
+    margin-top: 280px;
+    transform-origin: 50% 50%;
+}
+
+#cover-logo.move-up, #cover-logo.move-down {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#cover-logo.move-up {
+    -webkit-transform: translate(0,-280px) scale(0.8);
+    -moz-transform: translate(0,-280px) scale(0.8);
+    -o-transform: translate(0,-280px) scale(0.8);
+    -ms-transform: translate(0,-280px) scale(0.8);
+    transform: translate(0,-280px) scale(0.8);
+}
+
+#cover-log.move-down {
+    transform: scale(1.25) translate(0, 284px);   
+}
+
 #logo {
     position: absolute;
     width: 132px;
@@ -86,6 +142,10 @@ body {
     width: 1920px;
 }
 
+#promotions-slider-container .slick-dots li {
+    display: none;
+}
+
 .selection-frame {
     position: absolute;
     top: 0;
@@ -99,16 +159,17 @@ body {
 }
 
 .selection-button {
-    position: relative;
+    background-image: url("../images/main_selection_page/main_selection_panel_btn.png");
+    background-repeat: no-repeat;
     margin-top: 1px;
+    width: 256px;
+    height: 43px;
+    line-height: 43px;
     color: white;
-}
-
-.selection-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 16px;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
 }
 
 [ui-view] {

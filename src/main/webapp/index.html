@@ -22,26 +22,48 @@
         <!-- custom css -->
         <link rel="stylesheet" href="assets/styles/app.css">
     </head>
-    <body ng-app="wayfindingApp">
+    <body ng-app="wayfindingApp" ng-controller="TouchController">
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="logo"></div>
+        <a href="#/cover"><div id="logo"></div></a>
         <div id="weather">Weather holder</div>
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
-        <!-- <div ng-hide="$state.current.name.substring(0, 5) == 'touch'" ui-view="navbar" ng-cloak=""></div> -->
+        <!-- <div ng-hide="$state.current.name == 'site'" ui-view="navbar" ng-cloak=""></div> -->
         <div class="container">
+            <div id="cover-logo" ng-class="moveUpDown">
+                <img src="assets/images/cover_center_title_eng.png">
+            </div>
             <div ui-view="content"></div>
+            
+            <div class="menu-buttons" ng-hide="hideMenuButtons()">
+                <a href="#/searchtenant">
+                    <div class="menu-button">Search Tenant</div>
+                </a>
+                <a href="#/serviceappartment">
+                    <div class="menu-button">Service Appartment</div>
+                </a>
+                <a href="#/promotions">
+                    <div class="menu-button">Promotions</div>
+                </a>
+                <a href="#/facilities">
+                    <div class="menu-button">Facilities</div>
+                </a>
+                <a href="#/nearby">
+                    <div class="menu-button">Nearby</div>
+                </a>
+            </div>
+            
             <div id="bottom-shadow"></div>
-            <div id="language-buttons-small" ng-controller="TouchController" ng-hide="hideSmallLanguageButtons()">
+            <div id="language-buttons-small" ng-hide="hideSmallLanguageButtons()">
                 <span style="margin-right:10px;">
                     <a href ng-click="setLanguage('en')">
-                        <img src="assets/images/Btn_eng_sml.png">
+                        <img ng-src="assets/images/{{ language == 'en' ? 'Btn_eng_sml_active.png' : 'Btn_eng_sml.png' }}">
                     </a>
                 </span>
                 <span>
                     <a href ng-click="setLanguage('zh-cn')">
-                        <img src="assets/images/Btn_chi_sml.png">
+                        <img ng-src="assets/images/{{ language == 'zh-cn' ? 'Btn_chi_sml_active.png' : 'Btn_chi_sml.png' }}">
                     </a>
                 </span>
             </div>
