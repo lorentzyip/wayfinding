@@ -37,6 +37,7 @@ module.exports = function (config) {
             'main/webapp/bower_components/slick-carousel/slick/slick.min.js',
             'main/webapp/bower_components/angular-slick/dist/slick.js',
             'main/webapp/bower_components/ng-dialog/js/ngDialog.js',
+            'main/webapp/bower_components/ng-idle/angular-idle.js',
             'main/webapp/bower_components/angular-mocks/angular-mocks.js',
             // endbower
             'main/webapp/scripts/app/app.js',
