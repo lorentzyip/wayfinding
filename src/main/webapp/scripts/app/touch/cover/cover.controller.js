@@ -4,8 +4,14 @@ angular.module('wayfindingApp')
 
         $scope.setLanguageAndGo = function(languageKey) {
             $translate.use(languageKey);
-            $scope.setLanguage(languageKey);
+            $rootScope.language = languageKey;
             // $rootScope.moveUpDown = 'move-up';
             $state.go('mainselection');
         };
+        
+        var init = function() {
+            //$translate.use($rootScope.language);
+        };
+        
+        init();
     });

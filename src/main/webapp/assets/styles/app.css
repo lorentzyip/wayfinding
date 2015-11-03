@@ -134,6 +134,14 @@ body {
     left: 30px;
 }
 
+#language-buttons-small.ng-hide-add, #language-buttons-small.ng-hide-remove {
+  transition: 1s ease all;
+}
+
+#language-buttons-small.ng-hide {
+    opacity: 0;
+}
+
 #content-mainselection {
     position: absolute;
     width: 1920px;
@@ -179,7 +187,7 @@ body {
 .selection-button {
     background-image: url("../images/main_selection_page/main_selection_panel_btn.png");
     background-repeat: no-repeat;
-    margin-top: 1px;
+    margin-top: 2px;
     width: 256px;
     height: 43px;
     line-height: 43px;

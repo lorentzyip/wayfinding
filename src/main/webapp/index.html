@@ -40,19 +40,19 @@
             <div class="menu-buttons" ng-hide="hideMenuButtons()">
                 <!-- <div class="menu-button-selection"></div> -->
                 <a href="#/searchtenant">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'searchtenant'}">Search Tenant</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'searchtenant'}" translate="mainselection.tenant">Search Tenant</div>
                 </a>
-                <a href="#/serviceappartment">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'serviceappartment'}">Service Appartment</div>
+                <a href="#/serviceapartment">
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'serviceapartment'}" translate="mainselection.apartment">Service Apartment</div>
                 </a>
                 <a href="#/promotions">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'promotions'}">Promotions</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'promotions'}" translate="mainselection.promotions">Promotions</div>
                 </a>
                 <a href="#/facilities">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'facilities'}">Facilities</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'facilities'}" translate="mainselection.facilities">Facilities</div>
                 </a>
                 <a href="#/nearby">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'nearby'}">Nearby</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'nearby'}" translate="mainselection.nearby">Nearby</div>
                 </a>
             </div>
             
@@ -108,6 +108,7 @@
         <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
         <script src="bower_components/angular-slick/dist/slick.js"></script>
         <script src="bower_components/ng-dialog/js/ngDialog.js"></script>
+        <script src="bower_components/ng-idle/angular-idle.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

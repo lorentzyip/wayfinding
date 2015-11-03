@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('PromotionsController', function ($scope, $state, $translate, $timeout, $window, ngDialog) {
+    .controller('PromotionsController', function ($scope, $rootScope, $state, $translate, $timeout, $window, ngDialog) {
         $scope.promotions = [];
         
         // todo implement this function to get the real promotion data
@@ -45,6 +45,7 @@ angular.module('wayfindingApp')
         
         var init = function() {
             $scope.promotions = getPromotions();
+            $translate.use($rootScope.language);
         };
         
         $scope.showPromotionDetails = function(promotionName) {
