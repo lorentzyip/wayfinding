@@ -49,7 +49,7 @@ angular.module('wayfindingApp')
         
         $scope.showPromotionDetails = function(promotionName) {
             ngDialog.open({
-                template: 'templates/promotion.html',
+                template: 'scripts/app/touch/promotions/promotion.html',
                 className: 'ngdialog-theme-default custom-width',
                 closeByDocument: false
             });

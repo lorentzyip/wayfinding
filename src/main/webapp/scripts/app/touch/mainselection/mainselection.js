@@ -11,7 +11,7 @@ angular.module('wayfindingApp')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'templates/mainselection.html',
+                        templateUrl: 'scripts/app/touch/mainselection/mainselection.html',
                         controller: 'MainSelectionController'
                     }
                 }

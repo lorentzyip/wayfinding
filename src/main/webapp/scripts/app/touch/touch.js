@@ -2,8 +2,8 @@
 
 angular.module('wayfindingApp')
     .config(function ($stateProvider) {
+        /*
         $stateProvider
-            /*
             .state('touch', {
                 parent: 'site',
                 url: '/touch',
@@ -26,9 +26,7 @@ angular.module('wayfindingApp')
                         $translatePartialLoader.addPart('main');
                         return $translate.refresh();
                     }]
-                }
-            })
-            */
+            });
             .state('cover' , {
                 url: "/cover",
                 data: {
@@ -42,4 +40,5 @@ angular.module('wayfindingApp')
                     }
                 }
             });
+            */
     });

@@ -36,21 +36,23 @@
             </div>
             <div ui-view="content"></div>
             
+            <!-- <menu-button></menu-button> -->
             <div class="menu-buttons" ng-hide="hideMenuButtons()">
+                <!-- <div class="menu-button-selection"></div> -->
                 <a href="#/searchtenant">
-                    <div class="menu-button">Search Tenant</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'searchtenant'}">Search Tenant</div>
                 </a>
                 <a href="#/serviceappartment">
-                    <div class="menu-button">Service Appartment</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'serviceappartment'}">Service Appartment</div>
                 </a>
                 <a href="#/promotions">
-                    <div class="menu-button">Promotions</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'promotions'}">Promotions</div>
                 </a>
                 <a href="#/facilities">
-                    <div class="menu-button">Facilities</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'facilities'}">Facilities</div>
                 </a>
                 <a href="#/nearby">
-                    <div class="menu-button">Nearby</div>
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'nearby'}">Nearby</div>
                 </a>
             </div>
             
@@ -180,6 +182,9 @@
     <script src="scripts/app/main/main.controller.js"></script>
     <script src="scripts/app/touch/touch.js"></script>
     <script src="scripts/app/touch/touch.controller.js"></script>
+    <!-- <script src="scripts/app/touch/touch.directive.js"></script> -->
+    <script src="scripts/app/touch/cover/cover.js"></script>
+    <script src="scripts/app/touch/cover/cover.controller.js"></script>
     <script src="scripts/app/touch/mainselection/mainselection.js"></script>
     <script src="scripts/app/touch/mainselection/mainselection.controller.js"></script>
     <script src="scripts/app/touch/promotions/promotions.js"></script>

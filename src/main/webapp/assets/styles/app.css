@@ -11,7 +11,7 @@ body {
     position: absolute;
     bottom: 40px;
     left: 50%;
-    width: 1280px;
+    width: 1290px;
     transform: translate(-50%, 0);
 }
 
@@ -20,16 +20,17 @@ body {
 }
 
 .menu-buttons.ng-hide {
-    opacity:0;
+    opacity: 0;
 }
 
 .menu-button {
-    background-image: url('../images/Bottom_menu_02.png');
-    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.2);
+    border: white 1px solid;
     float: left;
     width: 256px;
     height: 43px;
     line-height: 43px;
+    margin-right: 2px;
     color: white;
     text-align: center;
     font-size: 15px;
@@ -37,6 +38,23 @@ body {
     font-style: italic;
     font-weight: bold;
 }
+
+.menu-button.active {
+    background-color: rgba(255,255,255,0);
+    color: #2F76B3;
+}
+
+/*
+.menu-button-selection {
+    position: absolute;
+    top: 0;
+    left: 256px;
+    width: 256px;
+    height: 43px;
+    background-color: rgba(255,255,255,0.3);
+    z-index: -1;
+}
+*/
 
 #cover-logo {
     text-align: center;

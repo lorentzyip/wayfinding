@@ -11,7 +11,7 @@ angular.module('wayfindingApp')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'templates/promotions.html',
+                        templateUrl: 'scripts/app/touch/promotions/promotions.html',
                         controller: 'PromotionsController'
                     }
                 }
