@@ -1,0 +1,10 @@
+{
+    "mainselection": {
+        "title": "选项",
+        "tenant": "商户",
+        "apartment": "公寓",
+        "promotions": "促销",
+        "facilities": "设施",
+        "nearby": "附近"
+    }
+}

@@ -35,16 +35,17 @@ angular.module('wayfindingApp')
                 });
             }
         };
-        
+
         $scope.hideSmallLanguageButtons = function() {
-            return $state.is("cover");  
+            return $state.is("cover");
         };
-        
+
         $scope.hideMenuButtons = function() {
             return $state.is("cover") || $state.is("mainselection");
         }
-        
+
         $scope.setLanguage = function(languageKey) {
+            $translate.use(languageKey);
             $rootScope.language = languageKey;
         };
     });

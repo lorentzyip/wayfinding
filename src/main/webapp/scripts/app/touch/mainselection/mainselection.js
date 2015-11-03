@@ -7,13 +7,19 @@ angular.module('wayfindingApp')
                 url: "/mainselection",
                 data: {
                     authorities: [],
-                    pageTitle: 'Main Selection'
+                    pageTitle: 'mainselection.title'
                 },
                 views: {
                     'content@': {
                         templateUrl: 'scripts/app/touch/mainselection/mainselection.html',
                         controller: 'MainSelectionController'
                     }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('mainselection');
+                        return $translate.refresh();
+                    }]
                 }
             });
     });
