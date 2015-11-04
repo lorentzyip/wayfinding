@@ -134,6 +134,15 @@ body {
     left: 30px;
 }
 
+#language-buttons-big {
+    text-align: center;
+}
+
+.language-button-big {
+    float: left;
+    margin-right: 20px;
+}
+
 #language-buttons-small.ng-hide-add, #language-buttons-small.ng-hide-remove {
   transition: 1s ease all;
 }

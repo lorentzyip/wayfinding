@@ -22,6 +22,9 @@ angular.module('wayfindingApp')
                         return data;
                     }
                 }
+            }),
+            promotionsJson: $resource('assets/jsons/promotions/:promotionId.json', {}, {
+                'query': { method: 'GET', params: { promotionId: 'promotions' }, isArray: true}
             })
         };
     });
