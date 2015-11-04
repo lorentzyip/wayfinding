@@ -18,9 +18,9 @@
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
-        <!-- endbuild -->
         <!-- custom css -->
-        <link rel="stylesheet" href="assets/styles/app.css">
+        <link rel="stylesheet" href="assets/styles/app.css">s
+        <!-- endbuild -->
     </head>
     <body ng-app="wayfindingApp" ng-controller="TouchController">
         <!--[if lt IE 9]>
@@ -35,7 +35,7 @@
                 <img src="assets/images/cover_center_title_eng.png">
             </div>
             <div ui-view="content"></div>
-            
+
             <!-- <menu-button></menu-button> -->
             <div class="menu-buttons" ng-hide="hideMenuButtons()">
                 <!-- <div class="menu-button-selection"></div> -->
@@ -55,17 +55,17 @@
                     <div class="menu-button" ng-class="{active: $state.current.name === 'nearby'}" translate="mainselection.nearby">Nearby</div>
                 </a>
             </div>
-            
+
             <div id="bottom-shadow"></div>
             <div id="language-buttons-small" ng-hide="hideSmallLanguageButtons()">
                 <span style="margin-right:10px;">
                     <a href ng-click="setLanguage('en')">
-                        <img ng-src="assets/images/{{ language == 'en' ? 'Btn_eng_sml_active.png' : 'Btn_eng_sml.png' }}">
+                        <img ng-src="{{ language == 'en' ? 'assets/images/Btn_eng_sml_active.png' : 'assets/images/Btn_eng_sml.png' }}">
                     </a>
                 </span>
                 <span>
                     <a href ng-click="setLanguage('zh-cn')">
-                        <img ng-src="assets/images/{{ language == 'zh-cn' ? 'Btn_chi_sml_active.png' : 'Btn_chi_sml.png' }}">
+                        <img ng-src="{{ language == 'zh-cn' ? 'assets/images/Btn_chi_sml_active.png' : 'assets/images/Btn_chi_sml.png' }}">
                     </a>
                 </span>
             </div>
