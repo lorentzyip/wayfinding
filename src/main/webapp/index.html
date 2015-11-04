@@ -60,12 +60,12 @@
             <div id="language-buttons-small" ng-hide="hideSmallLanguageButtons()">
                 <span style="margin-right:10px;">
                     <a href ng-click="setLanguage('en')">
-                        <img ng-src="{{ language == 'en' ? 'assets/images/Btn_eng_sml_active.png' : 'assets/images/Btn_eng_sml.png' }}">
+                        <img ng-src="assets/images/{{ language == 'en' ? 'Btn_eng_sml_active.png' : 'Btn_eng_sml.png' }}">
                     </a>
                 </span>
                 <span>
                     <a href ng-click="setLanguage('zh-cn')">
-                        <img ng-src="{{ language == 'zh-cn' ? 'assets/images/Btn_chi_sml_active.png' : 'assets/images/Btn_chi_sml.png' }}">
+                        <img ng-src="assets/images/{{ language == 'zh-cn' ? 'Btn_chi_sml_active.png' : 'Btn_chi_sml.png' }}">
                     </a>
                 </span>
             </div>
