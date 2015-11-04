@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('TouchController', function ($scope, $translate, $timeout, Auth) {
+    .controller('TouchController', function ($scope, $rootScope, $state, $translate, $timeout, Auth) {
         $scope.success = null;
         $scope.error = null;
         $scope.doNotMatch = null;
         $scope.errorUserExists = null;
         $scope.registerAccount = {};
+        $rootScope.language = 'zh-cn';
+        $scope.$state = $state;
         $timeout(function (){angular.element('[ng-model="registerAccount.login"]').focus();});
 
         $scope.register = function () {
@@ -32,5 +34,18 @@ angular.module('wayfindingApp')
                     }
                 });
             }
+        };
+
+        $scope.hideSmallLanguageButtons = function() {
+            return $state.is("cover");
+        };
+
+        $scope.hideMenuButtons = function() {
+            return $state.is("cover") || $state.is("mainselection");
+        }
+
+        $scope.setLanguage = function(languageKey) {
+            $translate.use(languageKey);
+            $rootScope.language = languageKey;
         };
     });

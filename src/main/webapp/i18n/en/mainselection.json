@@ -1,0 +1,10 @@
+{
+    "mainselection": {
+        "title": "Multi Selection",
+        "tenant": "Search Tenant",
+        "apartment": "Service Apartment",
+        "promotions": "Promotions",
+        "facilities": "Facilities",
+        "nearby": "Nearby"
+    }
+}

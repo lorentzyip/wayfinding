@@ -1,0 +1,36 @@
+<div id="content-promotions">
+	<!--
+	<div>
+		<img class="page-logo" src="assets/images/cover_center_title_eng.png">
+	</div>
+	-->
+
+	<div id="promotions-slider-container">
+		<slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true"
+		lazy-load="progressive" dots="true">
+			<!--
+			<div class="promotion-container">
+				<img src="assets/images/promotions/eight_weeks_of_bruce.large.jpg">
+			</div>
+			<div class="promotion-container">
+				<img src="assets/images/promotions/everything_matters.large.jpg">
+			</div>
+			<div class="promotion-container">
+				<img src="assets/images/promotions/gabriel_garcia_marquez.large.jpg">
+			</div>
+			<div class="promotion-container">
+				<img src="assets/images/promotions/strange_bedfellows.large.jpg">
+			</div>
+			<div class="promotion-container">
+				<img src="assets/images/promotions/whats_liberal_about_the_liberal_arts.large.jpg">
+			</div>
+			-->
+			<div ng-repeat="promotion in promotions" class="promotion-container">
+				<a href ng-click="showPromotionDetails(promotion.Name)">
+					<!-- <img ng-src="{{ promotion.ImageUrl }}" alt="{{ promotion.Name }}"> -->
+					<img data-lazy="{{ promotion.ImageUrl }}">
+				</a>
+			</div>
+		</slick>
+	</div>
+</div>

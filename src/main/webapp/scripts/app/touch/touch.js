@@ -2,6 +2,7 @@
 
 angular.module('wayfindingApp')
     .config(function ($stateProvider) {
+        /*
         $stateProvider
             .state('touch', {
                 parent: 'site',
@@ -25,19 +26,19 @@ angular.module('wayfindingApp')
                         $translatePartialLoader.addPart('main');
                         return $translate.refresh();
                     }]
-                }
-            })
-            .state('welcome' , {
-                url: "/welcome",
+            });
+            .state('cover' , {
+                url: "/cover",
                 data: {
                     authorities: [],
                     pageTitle: 'Welcome'
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'templates/welcome.html',
+                        templateUrl: 'templates/cover.html',
                         controller: 'TouchController'
                     }
                 }
             });
+            */
     });
