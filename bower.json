@@ -29,7 +29,8 @@
         "swagger-ui": "2.1.2",
         "angular-slick": "0.2.1",
         "ng-dialog": "latest",
-        "ng-idle": "latest"
+        "ng-idle": "latest",
+        "weather-icons": "latest"
     },
     "devDependencies": {
         "angular-mocks": "1.4.5",

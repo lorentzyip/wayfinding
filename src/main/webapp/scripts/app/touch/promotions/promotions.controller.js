@@ -22,13 +22,22 @@ angular.module('wayfindingApp')
         
         $scope.loadPromotionsJson = function() {
             $scope.promotions = TouchService.promotionsJson.query();
+            /*
+            TouchService.promotionJson.query(function(data) {
+                $scope.promotions = data;
+            });
+            */
         };
 
-        $scope.showPromotionDetails = function(promotionId) {
-            $scope.promotion = TouchService.promotionsJson.get({ promotionId: promotionId });
+        $scope.showPromotionDetails = function(id) {
+            //$scope.promotion = TouchService.promotionsJson.get({ promotionId: id });
+            TouchService.promotionsJson.get({ promotionId: id}, function(data) {
+                $scope.promotion = data;
+            });
             ngDialog.open({
                 template: 'scripts/app/touch/promotions/promotion.html',
                 className: 'ngdialog-theme-default custom-width',
+                scope: $scope,
                 closeByDocument: false
             });
         };

@@ -2,97 +2,41 @@
 	{
 		"name": "Promotion A",
 		"id": "promotion-a",
-		"imageUrl": "assets/images/promotions/eight_weeks_of_bruce.large.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/eight_weeks_of_bruce.large.jpg"
 	},
 	{
 		"name": "Promotion B",
 		"id": "promotion-b",
-		"imageUrl": "assets/images/promotions/everything_matters.large.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/everything_matters.large.jpg"
 	},
 	{
 		"name": "Promotion C",
 		"id": "promotion-c",
-		"imageUrl": "assets/images/promotions/gabriel_garcia_marquez.large.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/gabriel_garcia_marquez.large.jpg"
 	},
 	{
 		"name": "Promotion D",
 		"id": "promotion-d",
-		"imageUrl": "assets/images/promotions/lrg.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/lrg.jpg"
 	},
 	{
 		"name": "Promotion E",
 		"id": "promotion-e",
-		"imageUrl": "assets/images/promotions/lrg2.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/lrg2.jpg"
 	},
 	{
 		"name": "Promotion F",
 		"id": "promotion-f",
-		"imageUrl": "assets/images/promotions/lrg3.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/lrg3.jpg"
 	},
 	{
 		"name": "Promotion G",
 		"id": "promotion-g",
-		"imageUrl": "assets/images/promotions/strange_bedfellows.large.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/strange_bedfellows.large.jpg"
 	},
 	{
 		"name": "Promotion H",
 		"id": "promotion-h",
-		"imageUrl": "assets/images/promotions/whats_liberal_about_the_liberal_arts.large.jpg",
-		"images": [
-			"assets/images/promotions/promotionA/1.jpg",
-			"assets/images/promotions/promotionA/2.jpg",
-			"assets/images/promotions/promotionA/3.jpg",
-			"assets/images/promotions/promotionA/4.jpg",
-			"assets/images/promotions/promotionA/5.jpg"
-		]
+		"imageUrl": "assets/images/promotions/whats_liberal_about_the_liberal_arts.large.jpg"
 	}
 ]

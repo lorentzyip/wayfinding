@@ -24,7 +24,13 @@ angular.module('wayfindingApp')
                 }
             }),
             promotionsJson: $resource('assets/jsons/promotions/:promotionId.json', {}, {
-                'query': { method: 'GET', params: { promotionId: 'promotions' }, isArray: true}
+                'query': { method: 'GET', params: { promotionId: 'promotions' }, isArray: true }
+            }),
+            facilitiesJson: $resource('assets/jsons/facilities/:facilityId.json', {}, {
+                'query': { method: 'GET', params: { facilityId: 'facilities' }, isArray: true }
+            }),
+            nearbyJson: $resource('assets/jsons/nearby/:spotId.json', {}, {
+                'query': { method: 'GET', params: { spotId: 'nearby' }, isArray: true }
             })
         };
     });

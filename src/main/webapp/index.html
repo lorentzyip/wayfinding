@@ -14,12 +14,16 @@
         <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
         <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css" />
         <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css" />
+        <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.css" />
+        <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css" />
+        <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons-wind.css" />
+        <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons-wind.min.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- custom css -->
-        <link rel="stylesheet" href="assets/styles/app.css">s
+        <link rel="stylesheet" href="assets/styles/app.css">
         <!-- endbuild -->
     </head>
     <body ng-app="wayfindingApp" ng-controller="TouchController">
@@ -27,7 +31,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <a href="#/cover"><div id="logo"></div></a>
-        <div id="weather">Weather holder</div>
+        <div id="weather" ng-controller="WeatherController"><div><i class="wi wi-owm-{{ weather.id }}" style="font-size:50px;"></i></div></div>
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
         <!-- <div ng-hide="$state.current.name == 'site'" ui-view="navbar" ng-cloak=""></div> -->
         <div class="container">
@@ -39,11 +43,11 @@
             <!-- <menu-button></menu-button> -->
             <div class="menu-buttons" ng-hide="hideMenuButtons()">
                 <!-- <div class="menu-button-selection"></div> -->
-                <a href="#/searchtenant">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'searchtenant'}" translate="mainselection.tenant">Search Tenant</div>
+                <a href="#/tenant">
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'tenant'}" translate="mainselection.tenant">Search Tenant</div>
                 </a>
-                <a href="#/serviceapartment">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'serviceapartment'}" translate="mainselection.apartment">Service Apartment</div>
+                <a href="#/apartment">
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'apartment'}" translate="mainselection.apartment">Service Apartment</div>
                 </a>
                 <a href="#/promotions">
                     <div class="menu-button" ng-class="{active: $state.current.name === 'promotions'}" translate="mainselection.promotions">Promotions</div>
@@ -184,6 +188,9 @@
     <script src="scripts/app/touch/touch.js"></script>
     <script src="scripts/app/touch/touch.controller.js"></script>
     <script src="scripts/app/touch/touch.service.js"></script>
+    <script src="scripts/app/touch/weather/weather.js"></script>
+    <script src="scripts/app/touch/weather/weather.service.js"></script>
+    <script src="scripts/app/touch/weather/weather.controller.js"></script>
     <!-- <script src="scripts/app/touch/touch.directive.js"></script> -->
     <script src="scripts/app/touch/cover/cover.js"></script>
     <script src="scripts/app/touch/cover/cover.controller.js"></script>
@@ -193,8 +200,14 @@
     <script src="scripts/app/touch/tenant/tenant-detail.controller.js"></script>
     <script src="scripts/app/touch/mainselection/mainselection.js"></script>
     <script src="scripts/app/touch/mainselection/mainselection.controller.js"></script>
+    <script src="scripts/app/touch/apartment/apartment.js"></script>
+    <script src="scripts/app/touch/apartment/apartment.controller.js"></script>
     <script src="scripts/app/touch/promotions/promotions.js"></script>
     <script src="scripts/app/touch/promotions/promotions.controller.js"></script>
+    <script src="scripts/app/touch/facilities/facilities.js"></script>
+    <script src="scripts/app/touch/facilities/facilities.controller.js"></script>
+    <script src="scripts/app/touch/nearby/nearby.js"></script>
+    <script src="scripts/app/touch/nearby/nearby.controller.js"></script>
     <script src="bower_components/messageformat/locale/en.js"></script>
     <script src="bower_components/messageformat/locale/fr.js"></script>
     <script src="scripts/components/language/language.service.js"></script>
