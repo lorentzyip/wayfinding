@@ -4,7 +4,7 @@
 		lazy-load="progressive" dots="true">
 			<div ng-repeat="facility in facilities" class="facility-container">
 				<a href ng-click="showFacilityDetails(facility.id)">
-					<img data-lazy="{{ facility.imageUrl }}">
+					<img ng-src="{{ facility.imageUrl }}" data-lazy="{{ facility.imageUrl }}">
 				</a>
 			</div>
 		</slick>

@@ -1,7 +1,7 @@
 <div>
 	<slick arrows="false" lazy-load="progressive" dots="true">
 		<div class="single-facility-container" ng-repeat="img in facility.images">
-			<img data-lazy="{{ img }}">
+			<img ng-src="{{ img }}" data-lazy="{{ img }}">
 		</div>
 	</slick>
 	<div>

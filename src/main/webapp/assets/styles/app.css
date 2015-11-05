@@ -175,11 +175,43 @@ body {
     margin-right: 5px;
 }
 
+.building-image {
+    float: left;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 150px;
+    background-color: indianred;
+}
+
+.building-floors {
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 100px;
+    background-color: darkslateblue;
+}
+
 .apartment-details-container {
     width: 1578px;
     height: 100%;
     float: left;
     background-color: rgba(255,255,255,0.3);
+}
+
+.apartment-images {
+    float: left;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 500px;
+    background-color: lightseagreen;
+}
+
+.apartment-description {
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 500px;
+    background-color: royalblue;
 }
 
 #content-promotions, #content-facilities, #content-nearby {

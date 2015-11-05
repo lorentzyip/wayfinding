@@ -21,7 +21,7 @@
 			-->
 			<div ng-repeat="promotion in promotions" class="promotion-container">
 				<a href ng-click="showPromotionDetails(promotion.id)">
-					<img data-lazy="{{ promotion.imageUrl }}">
+					<img ng-src="{{ promotion.imageUrl }}" data-lazy="{{ promotion.imageUrl }}">
 				</a>
 			</div>
 		</slick>
