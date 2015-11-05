@@ -1,10 +1,4 @@
 <div id="content-promotions">
-	<!--
-	<div>
-		<img class="page-logo" src="assets/images/cover_center_title_eng.png">
-	</div>
-	-->
-
 	<div id="promotions-slider-container">
 		<slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true"
 		lazy-load="progressive" dots="true">
@@ -27,7 +21,6 @@
 			-->
 			<div ng-repeat="promotion in promotions" class="promotion-container">
 				<a href ng-click="showPromotionDetails(promotion.id)">
-					<!-- <img ng-src="{{ promotion.ImageUrl }}" alt="{{ promotion.Name }}"> -->
 					<img data-lazy="{{ promotion.imageUrl }}">
 				</a>
 			</div>

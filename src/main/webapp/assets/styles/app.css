@@ -158,27 +158,76 @@ body {
     left: 290px;
 }
 
-#content-promotions {
+#content-apartment {
+    margin-top: 141px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 1920px;
+    /* height: 814px; */
+    height: 600px;
+}
+
+.building-container {
+    width: 317px;
+    height: 100%;
+    float: left;
+    background-color: rgba(255,255,255,0.3);
+    margin-right: 5px;
+}
+
+.apartment-details-container {
+    width: 1578px;
+    height: 100%;
+    float: left;
+    background-color: rgba(255,255,255,0.3);
+}
+
+#content-promotions, #content-facilities, #content-nearby {
     text-align: center;
     width: 100%;
     height: 100%;
     padding: 10px;
 }
 
-#content-promotion {
+#content-promotion, #content-facility, #content-spot {
     width: 1024px;
     height: 768px;
 }
 
-#promotions-slider-container {
+#promotions-slider-container, #facilities-slider-container, #nearby-slider-container {
     position: absolute;
     top: 190px;
     left: 0px;
     width: 1920px;
 }
 
-#promotions-slider-container .slick-dots li {
+#promotions-slider-container .slick-dots li, #facilities-slider-container .slick-dots li, #nearby-slider-container .slick-dots li {
     display: none;
+}
+
+.promotion-container, .facility-container, .spot-container {
+    width: 366px;
+    height: 715px;
+}
+
+.promotion-container img, .facility-container img, .spot-container img {
+    width: 366px;
+    height: 549px;
+    margin: auto;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent));
+}
+
+.single-promotion-container, .single-facility-container, .single-spot-container {
+    width: 1280px;
+    height: 720px;
+}
+
+.single-promotion-container img, .single-facility-container img, .single-spot-container img {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
 }
 
 .selection-frame {
@@ -240,31 +289,6 @@ a:hover, a:active, a:focus {
 
 img {
     border: 0;
-}
-
-.promotion-container {
-    width: 366px;
-    height: 715px;
-}
-
-.promotion-container img {
-    width: 366px;
-    height: 549px;
-    margin: auto;
-    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent));
-}
-
-.single-promotion-container {
-    width: 1280px;
-    height: 720px;
-}
-
-.single-promotion-container img {
-    width: 1280px;
-    height: 720px;
-    margin: auto;
 }
 
 .slick-dots li button:before {

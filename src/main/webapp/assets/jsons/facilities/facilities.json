@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Facility 1",
+		"id": "facility-1",
+		"imageUrl": "assets/images/facilities/facility-1.jpg"
+	},
+	{
+		"name": "Facility 2",
+		"id": "facility-2",
+		"imageUrl": "assets/images/facilities/facility-2.jpg"
+	},
+	{
+		"name": "Facility 3",
+		"id": "facility-3",
+		"imageUrl": "assets/images/facilities/facility-3.jpg"
+	},
+	{
+		"name": "Facility 4",
+		"id": "facility-4",
+		"imageUrl": "assets/images/facilities/facility-4.jpg"
+	},
+	{
+		"name": "Facility 5",
+		"id": "facility-5",
+		"imageUrl": "assets/images/facilities/facility-5.jpg"
+	},
+	{
+		"name": "Facility 6",
+		"id": "facility-5",
+		"imageUrl": "assets/images/facilities/facility-6.jpg"
+	}
+]

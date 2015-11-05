@@ -19,7 +19,7 @@
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- custom css -->
-        <link rel="stylesheet" href="assets/styles/app.css">s
+        <link rel="stylesheet" href="assets/styles/app.css">
         <!-- endbuild -->
     </head>
     <body ng-app="wayfindingApp" ng-controller="TouchController">
@@ -39,11 +39,11 @@
             <!-- <menu-button></menu-button> -->
             <div class="menu-buttons" ng-hide="hideMenuButtons()">
                 <!-- <div class="menu-button-selection"></div> -->
-                <a href="#/searchtenant">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'searchtenant'}" translate="mainselection.tenant">Search Tenant</div>
+                <a href="#/tenant">
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'tenant'}" translate="mainselection.tenant">Search Tenant</div>
                 </a>
-                <a href="#/serviceapartment">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'serviceapartment'}" translate="mainselection.apartment">Service Apartment</div>
+                <a href="#/apartment">
+                    <div class="menu-button" ng-class="{active: $state.current.name === 'apartment'}" translate="mainselection.apartment">Service Apartment</div>
                 </a>
                 <a href="#/promotions">
                     <div class="menu-button" ng-class="{active: $state.current.name === 'promotions'}" translate="mainselection.promotions">Promotions</div>
@@ -189,8 +189,14 @@
     <script src="scripts/app/touch/cover/cover.controller.js"></script>
     <script src="scripts/app/touch/mainselection/mainselection.js"></script>
     <script src="scripts/app/touch/mainselection/mainselection.controller.js"></script>
+    <script src="scripts/app/touch/apartment/apartment.js"></script>
+    <script src="scripts/app/touch/apartment/apartment.controller.js"></script>
     <script src="scripts/app/touch/promotions/promotions.js"></script>
     <script src="scripts/app/touch/promotions/promotions.controller.js"></script>
+    <script src="scripts/app/touch/facilities/facilities.js"></script>
+    <script src="scripts/app/touch/facilities/facilities.controller.js"></script>
+    <script src="scripts/app/touch/nearby/nearby.js"></script>
+    <script src="scripts/app/touch/nearby/nearby.controller.js"></script>
     <script src="bower_components/messageformat/locale/en.js"></script>
     <script src="bower_components/messageformat/locale/fr.js"></script>
     <script src="scripts/components/language/language.service.js"></script>

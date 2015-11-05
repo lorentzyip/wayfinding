@@ -1,0 +1,17 @@
+[
+	{
+		"name": "景點一",
+		"id": "spot-1",
+		"imageUrl": "assets/images/nearby/spot-1.jpg"
+	},
+	{
+		"name": "Spot 2",
+		"id": "spot-2",
+		"imageUrl": "assets/images/nearby/spot-2.jpg"
+	},
+	{
+		"name": "пейзаж 3",
+		"id": "spot-3",
+		"imageUrl": "assets/images/nearby/spot-3.jpg"
+	}
+]
