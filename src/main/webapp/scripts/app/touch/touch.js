@@ -2,6 +2,11 @@
 
 angular.module('wayfindingApp')
     .config(function ($stateProvider) {
+        $stateProvider
+            .state('touch', {
+                abstract: true,
+                parent: 'site'
+            });
         /*
         $stateProvider
             .state('touch', {
