@@ -1,0 +1,110 @@
+{
+	"query": {
+		"count": 1,
+		"created": "2015-11-06T06:05:39Z",
+		"lang": "en-US",
+		"results": {
+			"channel": {
+				"title": "Yahoo! Weather - Hong Kong, HK",
+				"link": "http://us.rd.yahoo.com/dailynews/rss/weather/Hong_Kong__HK/*http://weather.yahoo.com/forecast/CHXX0104_f.html",
+				"description": "Yahoo! Weather for Hong Kong, HK",
+				"language": "en-us",
+				"lastBuildDate": "Fri, 06 Nov 2015 1:29 pm CST",
+				"ttl": "60",
+				"location": {
+					"city": "Hong Kong",
+					"country": "Hong Kong",
+					"region": ""
+				},
+				"units": {
+					"distance": "mi",
+					"pressure": "in",
+					"speed": "mph",
+					"temperature": "F"
+				},
+				"wind": {
+					"chill": "84",
+					"direction": "100",
+					"speed": "22"
+				},
+				"atmosphere": {
+					"humidity": "58",
+					"pressure": "29.94",
+					"rising": "2",
+					"visibility": "6.21"
+				},
+				"astronomy": {
+					"sunrise": "6:29 am",
+					"sunset": "5:43 pm"
+				},
+				"image": {
+					"title": "Yahoo! Weather",
+					"width": "142",
+					"height": "18",
+					"link": "http://weather.yahoo.com",
+					"url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+				},
+				"item": {
+					"title": "Conditions for Hong Kong, HK at 1:29 pm CST",
+					"lat": "22.41",
+					"long": "114.15",
+					"link": "http://us.rd.yahoo.com/dailynews/rss/weather/Hong_Kong__HK/*http://weather.yahoo.com/forecast/CHXX0104_f.html",
+					"pubDate": "Fri, 06 Nov 2015 1:29 pm CST",
+					"condition": {
+						"code": "30",
+						"date": "Fri, 06 Nov 2015 1:29 pm CST",
+						"temp": "84",
+						"text": "Partly Cloudy"
+					},
+					"description": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 84 F<BR />\n<BR /><b>Forecast:</b><BR />\nFri - Partly Cloudy. High: 84 Low: 75<br />\nSat - Partly Cloudy. High: 83 Low: 75<br />\nSun - Partly Cloudy. High: 84 Low: 73<br />\nMon - AM Showers. High: 85 Low: 72<br />\nTue - AM Showers. High: 80 Low: 71<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Hong_Kong__HK/*http://weather.yahoo.com/forecast/CHXX0104_f.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+					"forecast": [
+						{
+							"code": "30",
+							"date": "6 Nov 2015",
+							"day": "Fri",
+							"high": "84",
+							"low": "75",
+							"text": "Partly Cloudy"
+						},
+						{
+							"code": "30",
+							"date": "7 Nov 2015",
+							"day": "Sat",
+							"high": "83",
+							"low": "75",
+							"text": "Partly Cloudy"
+						},
+						{
+							"code": "30",
+							"date": "8 Nov 2015",
+							"day": "Sun",
+							"high": "84",
+							"low": "73",
+							"text": "Partly Cloudy"
+						},
+						{
+							"code": "39",
+							"date": "9 Nov 2015",
+							"day": "Mon",
+							"high": "85",
+							"low": "72",
+							"text": "AM Showers"
+						},
+						{
+							"code": "39",
+							"date": "10 Nov 2015",
+							"day": "Tue",
+							"high": "80",
+							"low": "71",
+							"text": "AM Showers"
+						}
+					],
+					"guid": {
+						"isPermaLink": "false",
+						"content": "CHXX0104_2015_11_10_7_00_CST"
+					}
+				}
+			}
+		}
+	}
+}

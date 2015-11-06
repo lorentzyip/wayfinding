@@ -18,7 +18,7 @@ angular.module('wayfindingApp')
             });
             ngDialog.open({
                 template: 'scripts/app/touch/nearby/spot.html',
-                className: 'ngdialog-theme-default custom-width',
+                className: 'ngdialog-theme-custom',
                 scope: $scope,
                 closeByDocument: false
             });

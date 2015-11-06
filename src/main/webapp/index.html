@@ -23,6 +23,7 @@
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- custom css -->
+        <link rel="stylesheet" href="assets/styles/ngDialog-theme-custom.css">
         <link rel="stylesheet" href="assets/styles/app.css">
         <!-- endbuild -->
     </head>
@@ -31,7 +32,20 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <a href="#/cover"><div id="logo"></div></a>
-        <div id="weather" ng-controller="WeatherController"><div><i class="wi wi-owm-{{ weather.id }}" style="font-size:50px;"></i></div></div>
+        <div id="weather-container" ng-controller="WeatherController">
+            <div class="weather-temp">
+                {{ weather.temp | temp }}
+            </div>
+            <div class="weather-icon">
+                <i class="wi wi-yahoo-{{ weather.id }}"></i>
+            </div>
+            <div class="weather-dow">
+                {{ date | date: 'EEEE' }}
+            </div>
+            <div class="weather-date">
+                {{ date | date: 'dd/MM/yyyy' }}
+            </div>
+        </div>
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
         <!-- <div ng-hide="$state.current.name == 'site'" ui-view="navbar" ng-cloak=""></div> -->
         <div class="container">
