@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('TouchController', function ($scope, $rootScope, $state, $translate, $timeout, Auth) {
+    .controller('TouchController', function ($scope, $rootScope, $state, $interval, $http, $translate, $timeout, Auth, weatherService) {
         $scope.success = null;
         $scope.error = null;
         $scope.doNotMatch = null;
         $scope.errorUserExists = null;
         $scope.registerAccount = {};
-        $rootScope.language = 'zh-cn';
+        $rootScope.language = '';
         $scope.$state = $state;
         $timeout(function (){angular.element('[ng-model="registerAccount.login"]').focus();});
 
@@ -48,4 +48,28 @@ angular.module('wayfindingApp')
             $translate.use(languageKey);
             $rootScope.language = languageKey;
         };
+        
+        $scope.updateWeather = function() {
+            $scope.weather = weatherService.getWeather('hongkong');
+        }
+        
+        var init = function() {
+            $http.get('assets/jsons/background.json').success(function(data) {
+                $scope.bgImages = data.images;
+                $scope.autoplaySpeed = data.autoplaySpeed;
+                $scope.transitionSpeed = data.transitionSpeed;
+            });
+            $scope.date = new Date();
+            $scope.updateWeather();
+        }
+        
+        init();
+        
+        var stopTime;
+        
+        stopTime = $interval($scope.updateWeather, 300000); // update every 5 mins
+        
+        $scope.$on('$destroy', function() {
+           $interval.cancel(stopTime); 
+        });
     });

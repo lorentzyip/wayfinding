@@ -1,28 +1,12 @@
 <div id="content-promotions">
 	<div id="promotions-slider-container">
-		<slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true"
-		lazy-load="progressive" dots="true">
-			<!--
-			<div class="promotion-container">
-				<img src="assets/images/promotions/eight_weeks_of_bruce.large.jpg">
-			</div>
-			<div class="promotion-container">
-				<img src="assets/images/promotions/everything_matters.large.jpg">
-			</div>
-			<div class="promotion-container">
-				<img src="assets/images/promotions/gabriel_garcia_marquez.large.jpg">
-			</div>
-			<div class="promotion-container">
-				<img src="assets/images/promotions/strange_bedfellows.large.jpg">
-			</div>
-			<div class="promotion-container">
-				<img src="assets/images/promotions/whats_liberal_about_the_liberal_arts.large.jpg">
-			</div>
-			-->
+		<!-- <slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true" lazy-load="progressive" dots="true"> -->
+		<slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true" dots="true">
 			<div ng-repeat="promotion in promotions" class="promotion-container">
-				<a href ng-click="showPromotionDetails(promotion.id)">
+				<!-- <a href ng-click="showPromotionDetails(promotion.id)">
 					<img ng-src="{{ promotion.imageUrl }}" data-lazy="{{ promotion.imageUrl }}" class="reflect">
-				</a>
+				</a> -->
+				<img ng-src="{{ promotion.imageUrl }}" class="reflect" ng-click="showPromotionDetails(promotion.id)">
 			</div>
 		</slick>
 	</div>

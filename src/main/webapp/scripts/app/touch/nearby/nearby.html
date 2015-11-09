@@ -1,11 +1,8 @@
 <div id="content-nearby">
 	<div id="nearby-slider-container">
-		<slick arrows="false" infinite="true" slides-to-show="{{ nearby.length < 5 ? nearby.length : 5 }}" swipe-to-slide="true"
-		lazy-load="progressive" dots="true">
+		<slick arrows="false" infinite="true" slides-to-show="{{ nearby.length < 5 ? nearby.length : 5 }}" swipe-to-slide="true">
 			<div ng-repeat="spot in nearby" class="spot-container">
-				<a href ng-click="showSpotDetails(spot.id)">
-					<img ng-src="{{ spot.imageUrl }}" data-lazy="{{ spot.imageUrl }}" class="reflect">
-				</a>
+				<img ng-src="{{ spot.imageUrl }}" class="reflect" ng-click="showSpotDetails(spot.id)">
 			</div>
 		</slick>
 	</div>
