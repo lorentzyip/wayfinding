@@ -219,31 +219,33 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     width: 1920px;
-    /* height: 814px; */
-    height: 600px;
+    height: 814px;
 }
 
 .building-container {
     width: 317px;
     height: 100%;
     float: left;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4);
 }
 
 .building-image {
+    background-image: url("../images/building.png");
+    background-size: 135px 675px;
+    background-repeat: no-repeat;
     float: left;
-    margin-top: 50px;
-    margin-left: 30px;
-    width: 150px;
-    background-color: indianred;
+    margin-top: 75px;
+    margin-left: 20px;
+    width: 230px;
+    height: 675px;
 }
 
 .building-floors {
     float: left;
-    margin-top: 50px;
-    margin-left: 10px;
-    width: 100px;
-    background-color: darkslateblue;
+    margin-top: 75px;
+    margin-left: 0px;
+    width: 20px;
+    /* background-color: darkslateblue; */
 }
 
 .apartment-details-container {
@@ -251,21 +253,29 @@ body {
     width: 1578px;
     height: 100%;
     float: left;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
 }
 
 .apartment-images {
-    float: left;
-    margin-top: 50px;
-    margin-left: 30px;
-    width: 500px;
-    background-color: lightseagreen;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 106px;
+    width: 1366px;
+    height: 768px;
+}
+
+.apartment-images img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 
 .apartment-description {
-    float: left;
-    margin-top: 50px;
-    margin-left: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
     width: 500px;
     background-color: royalblue;
 }
@@ -331,8 +341,8 @@ body {
 }
 
 .promotion-container, .facility-container, .spot-container {
-    position: relative;
-    float: left;
+    /* position: relative; */
+    /* float: left; */
     width: 366px;
     height: 715px;
 }
@@ -344,6 +354,7 @@ body {
     margin: 15px auto;
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    display: block;
     /* -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent)); */
 }
 
@@ -360,6 +371,7 @@ body {
     width: 1280px;
     height: 720px;
     margin: auto;
+    display: block;
 }
 
 .selection-frame {
@@ -424,8 +436,29 @@ img {
     outline: none;
 }
 
-.slick-dots li button:before {
+.slick-popup .slick-dots li button:before {
     font-size: 14px;
+}
+
+.apartment-images .slick-dots li button:before {
+    content: '■';
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+}
+
+.apartment-images .slick-dots li.slick-active button:before {
+    color: #2F76B3;
+    opacity: 1;
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;  
+}
+
+.apartment-images .slick-dots {
+    bottom: -36px;
 }
 
 .slick-slide, .slick-slide img {
@@ -468,4 +501,17 @@ li {
 .active {
     background-color: #000;
     color: #FFF;
+}
+
+.dot {
+    background-image: url("../images/dot-gray.png");
+    background-size: 9px 9px;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 9px;
+    margin-bottom: 2.5px;
+}
+
+.dot:active {
+    background-image: url("../images/dot-red.png");
 }

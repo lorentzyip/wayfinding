@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+		"name": "Platinum",
+		"imageUrl": "assets/images/apartment/apartment-platinum.jpg",
+		"description": "Platinum is a member of the platinum group of elements and group 10 of the periodic table of elements. It has six naturally occurring isotopes. It is one of the rarer elements in Earth's crust with an average abundance of approximately 5 μg/kg. It occurs in some nickel and copper ores along with some native deposits, mostly in South Africa, which accounts for 80% of the world production. Because of its scarcity in Earth's crust, only a few hundred tonnes are produced annually, and given its important uses, it is highly valuable and is a major precious metal commodity.",
+		"floor": 20,
+		"room": "D"
+	},
+	{
+		"id": "2",
+		"name": "Luxury",
+		"imageUrl": "assets/images/apartment/apartment-luxury.jpg",
+		"description": "Luxury real estate is often defined as real property that has an appraised value of over $1 million in the United States, yet this varies greatly depending on the location. The classification also takes into account the presence of surrounding homes, amenities, views, waterfronts, absence of crime-rate, industrialization or unwanted commercialization, customizations of the home, and historical or architectural significance.",
+		"floor": 10,
+		"room": "C"
+	},
+	{
+		"id": "3",
+		"name": "Standard",
+		"imageUrl": "assets/images/apartment/apartment-standard.jpg",
+		"description": "Enjoy a comfortable home base for your family's vacation at Aulani, A Disney Resort & Spa in Ko Olina, Hawai‘i. Standard rooms feature island décor, magical Disney touches and so much more.",
+		"floor": 5,
+		"room": "A"
+	}
+]

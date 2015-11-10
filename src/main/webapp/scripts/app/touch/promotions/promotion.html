@@ -1,24 +1,7 @@
-<div>
-	<slick arrows="false" lazy-load="progressive" dots="true">
-		<!--
-		<div class="single-promotion-container">
-			<img src="assets/images/promotions/promotionA/1.jpg">
-		</div>
-		<div class="single-promotion-container">
-			<img src="assets/images/promotions/promotionA/2.jpg">
-		</div>
-		<div class="single-promotion-container">
-			<img src="assets/images/promotions/promotionA/3.jpg">
-		</div>
-		<div class="single-promotion-container">
-			<img src="assets/images/promotions/promotionA/4.jpg">
-		</div>
-		<div class="single-promotion-container">
-			<img src="assets/images/promotions/promotionA/5.jpg">
-		</div>
-		-->
+<div class="slick-popup">
+	<slick arrows="false" dots="true">
 		<div class="single-promotion-container" ng-repeat="img in promotion.images">
-			<img ng-src="{{ img }}" data-lazy="{{ img }}">
+			<img ng-src="{{ img }}">
 		</div>
 	</slick>
 </div>

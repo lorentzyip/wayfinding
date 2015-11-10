@@ -41,6 +41,20 @@ angular.module('wayfindingApp')
         $scope.clear = function () {
             $scope.tenant = {name: null, floor: null, location: null, content: null, category: null, id: null};
         };
+        
+        var createFloor = function(n) {
+            var floors = [];
+            for (var i = 1; i <= n; i++) {
+                floors.push(i);
+            }
+            return floors;
+        };
+        
+        var init = function() {
+            $scope.floors = createFloor(59);
+        };
+        
+        init();
     }).controller('TabsCtrl', ['$scope', function ($scope) {
         $scope.tabs = [{
             title: 'By Tenant',

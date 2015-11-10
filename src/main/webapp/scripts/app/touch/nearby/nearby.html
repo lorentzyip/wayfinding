@@ -1,6 +1,6 @@
 <div id="content-nearby">
 	<div id="nearby-slider-container">
-		<slick arrows="false" infinite="true" slides-to-show="{{ nearby.length < 5 ? nearby.length : 5 }}" swipe-to-slide="true" touch-move="false">
+		<slick arrows="false" infinite="true" slides-to-show="{{ nearby.length < 5 ? nearby.length : 5 }}" swipe-to-slide="true" touch-move="false" dots="true">
 			<div ng-repeat="spot in nearby" class="spot-container">
 				<img ng-src="{{ spot.imageUrl }}" class="reflect" ng-click="showSpotDetails(spot.id)">
 			</div>
