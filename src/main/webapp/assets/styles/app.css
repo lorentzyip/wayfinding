@@ -258,11 +258,11 @@ body {
 }
 
 .apartment-images {
-    position: relative;
     margin-top: 10px;
     margin-left: 106px;
     width: 1366px;
     height: 768px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 .apartment-images img {
@@ -272,12 +272,21 @@ body {
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 
+.apartment-images .slick-slide {
+    position: relative;
+}
+
 .apartment-description {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 500px;
-    background-color: royalblue;
+    bottom: 20px;
+    right: 20px;
+    width: 80%;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    text-align: justify;
+    font-size: 24px;
+    padding: 10px;
+    text-shadow: 1px 1px black;
 }
 
 .tenant-map-container {
@@ -455,6 +464,25 @@ img {
     1px -1px 0 #FFF,
     -1px 1px 0 #FFF,
     1px 1px 0 #FFF;  
+}
+
+.apartment-images .slick-prev, .apartment-images .slick-next {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+}
+
+.apartment-images .slick-prev {
+    left: -90px;
+}
+
+.apartment-images .slick-next {
+    right: -90px;
+}
+
+.apartment-images .slick-prev:before, .apartment-images .slick-next:before {
+    line-height: 80px;
+    font-size: 80px;
 }
 
 .apartment-images .slick-dots {

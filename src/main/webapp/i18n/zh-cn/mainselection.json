@@ -1,10 +1,10 @@
 {
     "mainselection": {
         "title": "选项",
-        "tenant": "商户",
-        "apartment": "公寓",
-        "promotions": "促销",
-        "facilities": "设施",
-        "nearby": "附近"
+        "tenant": "搜寻商户",
+        "apartment": "服务式住宅",
+        "promotions": "近期优惠",
+        "facilities": "大厦设施",
+        "nearby": "附近热点"
     }
 }

@@ -33,7 +33,7 @@
         <![endif]-->
         <div id="site-bg">
             <div ng-if="bgImages.length > 1">
-                <slick infinite="true" fade="true" css-ease="linear" autoplay="true" speed=1000 zindex=-1000 autoplay-speed="{{ autoplaySpeed }}" speed="{{ transitionSpeed }}" draggable="false" swipe="false">
+                <slick infinite="true" arrows="false" fade="true" css-ease="linear" autoplay="true" speed=1000 zindex=-1000 autoplay-speed="{{ autoplaySpeed }}" speed="{{ transitionSpeed }}" draggable="false" swipe="false">
                     <div ng-repeat="image in bgImages">
                         <img ng-src="{{ image }}">
                     </div>
