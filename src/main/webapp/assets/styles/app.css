@@ -53,6 +53,7 @@ body {
     font-family: Corbel;
     /* font-style: italic; */
     font-weight: bold;
+    outline: none;
 }
 
 .menu-button.active {
@@ -420,13 +421,14 @@ a:hover, a:active, a:focus {
 
 img {
     border: 0;
+    outline: none;
 }
 
 .slick-dots li button:before {
     font-size: 14px;
 }
 
-.slick-slide {
+.slick-slide, .slick-slide img {
     outline: none;
 }
 

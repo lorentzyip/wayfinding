@@ -15,6 +15,11 @@ angular.module('wayfindingApp')
                         controller: 'TouchTenantController'
                     }
                 },
+                onEnter: function($rootScope) {
+                    if ($rootScope.moveUpDown != "move-up") {
+                        $rootScope.moveUpDown = "move-up";
+                    }
+                },
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('tenant');

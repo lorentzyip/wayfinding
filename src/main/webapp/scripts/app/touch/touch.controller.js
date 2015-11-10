@@ -54,6 +54,7 @@ angular.module('wayfindingApp')
         }
         
         var init = function() {
+            $scope.setLanguage('zh-cn');
             $http.get('assets/jsons/background.json').success(function(data) {
                 $scope.bgImages = data.images;
                 $scope.autoplaySpeed = data.autoplaySpeed;

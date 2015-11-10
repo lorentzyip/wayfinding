@@ -33,7 +33,7 @@
         <![endif]-->
         <div id="site-bg">
             <div ng-if="bgImages.length > 1">
-                <slick infinite="true" fade="true" css-ease="linear" autoplay="true" speed="1000" zindex="-1000" autoplay-speed="{{ autoplaySpeed }}" speed="{{ transitionSpeed }}">
+                <slick infinite="true" fade="true" css-ease="linear" autoplay="true" speed="1000" zindex="-1000" autoplay-speed="{{ autoplaySpeed }}" speed="{{ transitionSpeed }}" draggable="false" swipe="false">
                     <div ng-repeat="image in bgImages">
                         <img ng-src="{{ image }}">
                     </div>
@@ -70,34 +70,20 @@
             <!-- <menu-button></menu-button> -->
             <div class="menu-buttons" ng-hide="hideMenuButtons()">
                 <!-- <div class="menu-button-selection"></div> -->
-                <a href="#/tenant">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'tenant'}" translate="mainselection.tenant">Search Tenant</div>
-                </a>
-                <a href="#/apartment">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'apartment'}" translate="mainselection.apartment">Service Apartment</div>
-                </a>
-                <a href="#/promotions">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'promotions'}" translate="mainselection.promotions">Promotions</div>
-                </a>
-                <a href="#/facilities">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'facilities'}" translate="mainselection.facilities">Facilities</div>
-                </a>
-                <a href="#/nearby">
-                    <div class="menu-button" ng-class="{active: $state.current.name === 'nearby'}" translate="mainselection.nearby">Nearby</div>
-                </a>
+                <div class="menu-button" ng-class="{active: $state.current.name === 'touch.tenants'}" translate="mainselection.tenant" ng-click="$state.go('touch.tenants')">Search Tenant</div>
+                <div class="menu-button" ng-class="{active: $state.current.name === 'apartment'}" translate="mainselection.apartment" ng-click="$state.go('apartment')">Service Apartment</div>
+                <div class="menu-button" ng-class="{active: $state.current.name === 'promotions'}" translate="mainselection.promotions" ng-click="$state.go('promotions')">Promotions</div>
+                <div class="menu-button" ng-class="{active: $state.current.name === 'facilities'}" translate="mainselection.facilities" ng-click="$state.go('facilities')">Facilities</div>
+                <div class="menu-button" ng-class="{active: $state.current.name === 'nearby'}" translate="mainselection.nearby" ng-click="$state.go('nearby')">Nearby</div>
             </div>
 
             <div id="bottom-shadow"></div>
             <div id="language-buttons-small" ng-hide="hideSmallLanguageButtons()">
                 <span style="margin-right:10px;">
-                    <a href ng-click="setLanguage('en')">
-                        <img ng-src="assets/images/{{ language == 'en' ? 'Btn_eng_sml_active.png' : 'Btn_eng_sml.png' }}">
-                    </a>
+                    <img ng-src="assets/images/{{ language == 'en' ? 'Btn_eng_sml_active.png' : 'Btn_eng_sml.png' }}" ng-click="setLanguage('en')">
                 </span>
                 <span>
-                    <a href ng-click="setLanguage('zh-cn')">
-                        <img ng-src="assets/images/{{ language == 'zh-cn' ? 'Btn_chi_sml_active.png' : 'Btn_chi_sml.png' }}">
-                    </a>
+                    <img ng-src="assets/images/{{ language == 'zh-cn' ? 'Btn_chi_sml_active.png' : 'Btn_chi_sml.png' }}" ng-click="setLanguage('zh-cn')">
                 </span>
             </div>
         </div>
