@@ -13,7 +13,7 @@
 		</div>
 		<div class="apartment-details-container">
 			<div class="apartment-images">
-				<slick arrows="true" dots="true" current-index="apartmentIndex">
+				<slick arrows="true" dots="true" current-index="apartmentIndex" init-onload="true" data="apartments">
 					<div ng-repeat="apartment in apartments">
 						<img ng-src="{{ apartment.imageUrl }}">
 						<div class="apartment-description">{{ language === 'zh-cn' ? apartment.descriptionCN : apartment.descriptionEN }}</div>

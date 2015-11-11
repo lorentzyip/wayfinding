@@ -2,9 +2,9 @@
 
 angular.module('wayfindingApp')
     .controller('PromotionsController', function ($scope, $rootScope, $state, $translate, $timeout, $window, ngDialog, TouchService) {
-        //$scope.promotions = [];
+        $scope.promotions = null;
 
-        var init = function() {
+        var init = function () {
             $translate.use($rootScope.language);
             //$scope.loadAll();
             $scope.loadPromotionsJson();
@@ -19,27 +19,25 @@ angular.module('wayfindingApp')
             });
         };
         */
-        
-        $scope.loadPromotionsJson = function() {
-            $scope.promotions = TouchService.promotionsJson.query();
-            /*
-            TouchService.promotionJson.query(function(data) {
+
+        $scope.loadPromotionsJson = function () {
+            /* $scope.promotions = TouchService.promotionsJson.query(); */
+            TouchService.promotionsJson.query(function (data) {
                 $scope.promotions = data;
             });
-            */
         };
 
-        $scope.showPromotionDetails = function(id) {
+        $scope.showPromotionDetails = function (id) {
             //$scope.promotion = TouchService.promotionsJson.get({ promotionId: id });
-            TouchService.promotionsJson.get({ promotionId: id}, function(data) {
+            TouchService.promotionsJson.get({ promotionId: id }, function (data) {
                 $scope.promotion = data;
-            });
-            ngDialog.open({
-                template: 'scripts/app/touch/promotions/promotion.html',
-                //className: 'ngdialog-theme-default custom-width',
-                className: 'ngdialog-theme-custom',
-                scope: $scope,
-                closeByDocument: false
+                ngDialog.open({
+                    template: 'scripts/app/touch/promotions/promotion.html',
+                    //className: 'ngdialog-theme-default custom-width',
+                    className: 'ngdialog-theme-custom',
+                    scope: $scope,
+                    closeByDocument: false
+                });
             });
         };
 

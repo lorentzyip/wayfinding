@@ -3,7 +3,7 @@
 		Facilities
 	</div>
 	<div id="facilities-slider-container">
-		<slick arrows="false" infinite="true" slides-to-show="{{ facilities.length < 5 ? facilities.length : 5 }}" swipe-to-slide="true"  touch-move="false" dots="true">
+		<slick arrows="false" infinite="true" slides-to-show="{{ facilities.length < 5 ? facilities.length : 5 }}" swipe-to-slide="true"  touch-move="false" dots="true" init-onload="true" data="facilities">
 			<div ng-repeat="facility in facilities" class="facility-container">
 				<img ng-src="{{ facility.imageUrl }}" class="reflect" ng-click="showFacilityDetails(facility.id)">
 			</div>

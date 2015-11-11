@@ -2,7 +2,7 @@ angular.module('wayfindingApp')
 
 .controller('ApartmentController', function ($scope, $rootScope, $http, $state, $translate, $timeout, Auth) {
 	$scope.floors = [];
-	$scope.apartments = [];
+	$scope.apartments = null;
 	
 	var createFloor = function(n) {
 		var floors = [];

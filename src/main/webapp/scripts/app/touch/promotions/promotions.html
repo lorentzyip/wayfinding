@@ -4,7 +4,7 @@
 	</div>
 	<div id="promotions-slider-container">
 		<!-- <slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true" lazy-load="progressive" dots="true"> -->
-		<slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true" dots="true" touch-move="false">
+		<slick arrows="false" infinite="true" slides-to-show="{{ promotions.length < 5 ? prmotions.length : 5 }}" swipe-to-slide="true" dots="true" touch-move="false" init-onload="true" data="promotions">
 			<div ng-repeat="promotion in promotions" class="promotion-container">
 				<!-- <a href ng-click="showPromotionDetails(promotion.id)">
 					<img ng-src="{{ promotion.imageUrl }}" data-lazy="{{ promotion.imageUrl }}" class="reflect">

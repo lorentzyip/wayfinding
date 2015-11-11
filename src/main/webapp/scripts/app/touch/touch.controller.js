@@ -7,6 +7,7 @@ angular.module('wayfindingApp')
         $scope.doNotMatch = null;
         $rootScope.language = 'zh-cn';
         $scope.$state = $state;
+        $scope.bgImages = null;
 
         $scope.hideSmallLanguageButtons = function() {
             return $state.is("cover");
