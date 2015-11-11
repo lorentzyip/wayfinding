@@ -23,6 +23,11 @@ angular.module('wayfindingApp')
 
         $scope.updateWeather = function() {
             $scope.weather = weatherService.getWeather('hongkong');
+            $scope.updateDate();
+        }
+        
+        $scope.updateDate = function() {
+            $scope.date = new Date();
         }
 
         var init = function() {
@@ -31,7 +36,6 @@ angular.module('wayfindingApp')
                 $scope.autoplaySpeed = data.autoplaySpeed;
                 $scope.transitionSpeed = data.transitionSpeed;
             });
-            $scope.date = new Date();
             $scope.updateWeather();
         }
 

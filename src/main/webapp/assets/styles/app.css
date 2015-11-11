@@ -1,3 +1,7 @@
+html, body {
+    background: transparent;
+}
+
 body {
     background: url('../images/screen_bg.jpg');
     background-size: 1920px 1080px;
@@ -5,6 +9,15 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
     overflow: hidden;
+}
+
+div {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #site-bg {
@@ -53,6 +66,7 @@ body {
     font-family: Corbel;
     /* font-style: italic; */
     font-weight: bold;
+    outline: none;
 }
 
 .menu-button.active {
@@ -72,6 +86,7 @@ body {
 }
 */
 
+/*
 #cover-logo {
     text-align: center;
     margin-top: 280px;
@@ -95,6 +110,32 @@ body {
 
 #cover-log.move-down {
     transform: scale(1.25) translate(0, 284px);
+}
+*/
+
+#cover-logo {
+    text-align: center;
+    margin-top: 280px;
+    transform-origin: 50% 0%;
+}
+
+#cover-logo.move-up, #cover-logo.move-down {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+#cover-logo.move-up {
+    -webkit-transform: translate(0,-270px) scale(0.5);
+    -moz-transform: translate(0,-270px) scale(0.5);
+    -o-transform: translate(0,-270px) scale(0.5);
+    -ms-transform: translate(0,-270px) scale(0.5);
+    transform: translate(0,-270px) scale(0.5);
+}
+
+#cover-log.move-down {
+    transform: scale(2) translate(0, 270px);
 }
 
 #logo {
@@ -214,35 +255,53 @@ body {
 }
 
 #content-apartment, #content-tenant {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+#content-apartment, #content-tenant {
     margin-top: 141px;
     margin-left: 10px;
     margin-right: 10px;
     width: 1920px;
-    /* height: 814px; */
-    height: 600px;
+    height: 814px;
+}
+*/
+
+.apartment-container, .tenant-container {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 1920px;
+    height: 814px;
 }
 
 .building-container {
     width: 317px;
     height: 100%;
     float: left;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4);
 }
 
 .building-image {
+    background-image: url("../images/building.png");
+    background-size: 135px 675px;
+    background-repeat: no-repeat;
     float: left;
-    margin-top: 50px;
-    margin-left: 30px;
-    width: 150px;
-    background-color: indianred;
+    margin-top: 75px;
+    margin-left: 20px;
+    width: 240px;
+    height: 675px;
 }
 
 .building-floors {
     float: left;
-    margin-top: 50px;
-    margin-left: 10px;
-    width: 100px;
-    background-color: darkslateblue;
+    margin-top: 75px;
+    margin-left: 0px;
+    width: 20px;
+    /* background-color: darkslateblue; */
 }
 
 .apartment-details-container {
@@ -250,23 +309,40 @@ body {
     width: 1578px;
     height: 100%;
     float: left;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
 }
 
 .apartment-images {
-    float: left;
-    margin-top: 50px;
-    margin-left: 30px;
-    width: 500px;
-    background-color: lightseagreen;
+    margin-top: 10px;
+    margin-left: 106px;
+    width: 1366px;
+    height: 768px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.apartment-images img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+}
+
+.apartment-images .slick-slide {
+    position: relative;
 }
 
 .apartment-description {
-    float: left;
-    margin-top: 50px;
-    margin-left: 10px;
-    width: 500px;
-    background-color: royalblue;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 80%;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    text-align: justify;
+    font-size: 24px;
+    padding: 10px;
+    text-shadow: 1px 1px black;
 }
 
 .tenant-map-container {
@@ -302,7 +378,7 @@ body {
     clear: both;
     padding: 0 1em;
 }
-.active {
+#tenantSearchView.active {
     background-color: #000;
     color: #FFF;
 }
@@ -433,32 +509,47 @@ body {
     text-align: center;
 }
 
+.title {
+    margin-top: 85px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 45px;
+    color: #0f5b9c;
+    /* font-family: Corbel; */
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+}
+
 #content-promotions, #content-facilities, #content-nearby {
     text-align: center;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
-#content-promotion, #content-facility, #content-spot {
-    width: 1024px;
-    height: 768px;
-}
-
+/*
 #promotions-slider-container, #facilities-slider-container, #nearby-slider-container {
     position: absolute;
     top: 180px;
     left: 0px;
     width: 1920px;
 }
+*/
+
+#promotions-slider-container, #facilities-slider-container, #nearby-slider-container {
+    margin-top: 50px; 
+    width: 1920px;
+}
+
 
 #promotions-slider-container .slick-dots li, #facilities-slider-container .slick-dots li, #nearby-slider-container .slick-dots li {
     display: none;
 }
 
 .promotion-container, .facility-container, .spot-container {
-    position: relative;
-    float: left;
+    /* position: relative; */
+    /* float: left; */
     width: 366px;
     height: 715px;
 }
@@ -470,6 +561,7 @@ body {
     margin: 15px auto;
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    display: block;
     /* -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent)); */
 }
 
@@ -477,15 +569,23 @@ body {
     -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent));
 }
 
+/*
+.slick-popup {
+    width: 1366px;
+    height: 768px;
+}
+*/
+
 .single-promotion-container, .single-facility-container, .single-spot-container {
-    width: 1280px;
-    height: 720px;
+    width: 1366px;
+    height: 768px;
 }
 
 .single-promotion-container img, .single-facility-container img, .single-spot-container img {
-    width: 1280px;
-    height: 720px;
+    width: 1366px;
+    height: 768px;
     margin: auto;
+    display: block;
 }
 
 .selection-frame {
@@ -547,13 +647,54 @@ a:hover, a:active, a:focus {
 
 img {
     border: 0;
+    outline: none;
 }
 
-.slick-dots li button:before {
+.slick-popup .slick-dots li button:before {
     font-size: 14px;
 }
 
-.slick-slide {
+.apartment-images .slick-dots li button:before {
+    content: '■';
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+}
+
+.apartment-images .slick-dots li.slick-active button:before {
+    color: #2F76B3;
+    opacity: 1;
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;  
+}
+
+.apartment-images .slick-prev, .apartment-images .slick-next {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+}
+
+.apartment-images .slick-prev {
+    left: -90px;
+}
+
+.apartment-images .slick-next {
+    right: -90px;
+}
+
+.apartment-images .slick-prev:before, .apartment-images .slick-next:before {
+    line-height: 80px;
+    font-size: 80px;
+}
+
+.apartment-images .slick-dots {
+    bottom: -36px;
+}
+
+.slick-slide, .slick-slide img {
     outline: none;
 }
 
@@ -584,3 +725,31 @@ li {
     color: #696969;
 }
 */
+
+#tenantSearchView {
+    border: 1px solid black;
+    clear: both;
+    padding: 0 1em;
+}
+#tenantSearchView.active {
+    background-color: #000;
+    color: #FFF;
+}
+
+.dot {
+    background-image: url("../images/dot-gray.png");
+    background-size: 9px 9px;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 9px;
+    margin-bottom: 2.5px;
+}
+
+.dot.active {
+    background-image: url("../images/dot-red.png");
+    animation: blinker 1s ease infinite;
+}
+
+@keyframes blinker {  
+    50% { opacity: 0.1; }
+}

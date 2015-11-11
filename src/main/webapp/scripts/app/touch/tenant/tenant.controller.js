@@ -22,11 +22,9 @@ angular.module('wayfindingApp')
         $http.get('assets/jsons/tenant/searchByTenantKeyboardLayout.json').success(function(data) {
             $scope.searchByTenantKeyboardLayout = data;
         });
-
         $http.get('assets/jsons/tenant/searchByCategoryKeyboardLayout.json').success(function(data) {
             $scope.searchByCategoryKeyboardLayout = data;
         });
-
         $http.get('assets/jsons/tenant/searchByFloorKeyboardLayout.json').success(function(data) {
             $scope.searchByFloorKeyboardLayout = data;
         });
@@ -43,6 +41,19 @@ angular.module('wayfindingApp')
             $scope.someInput = value;
             $rootScope.$broadcast('floorKeyPressed', $scope.someInput, action);
         }
-    })
-;
+        
+        var createFloor = function(n) {
+            var floors = [];
+            for (var i = 1; i <= n; i++) {
+                floors.push(i);
+            }
+            return floors;
+        };
+        
+        var init = function() {
+            $scope.floors = createFloor(59);
+        };
+        
+        init();
+    });
 
