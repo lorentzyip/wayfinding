@@ -16,7 +16,7 @@
 				<slick arrows="true" dots="true" current-index="apartmentIndex">
 					<div ng-repeat="apartment in apartments">
 						<img ng-src="{{ apartment.imageUrl }}">
-						<div class="apartment-description">{{ apartment.description }}</div>
+						<div class="apartment-description">{{ language === 'zh-cn' ? apartment.descriptionCN : apartment.descriptionEN }}</div>
 					</div>
 				</slick>
 			</div>

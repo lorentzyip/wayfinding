@@ -3,24 +3,27 @@
 		"id": "1",
 		"name": "Platinum",
 		"imageUrl": "assets/images/apartment/apartment-platinum.jpg",
-		"description": "Platinum is a member of the platinum group of elements and group 10 of the periodic table of elements. It has six naturally occurring isotopes. It is one of the rarer elements in Earth's crust with an average abundance of approximately 5 μg/kg. It occurs in some nickel and copper ores along with some native deposits, mostly in South Africa, which accounts for 80% of the world production. Because of its scarcity in Earth's crust, only a few hundred tonnes are produced annually, and given its important uses, it is highly valuable and is a major precious metal commodity.",
-		"floor": 20,
+		"descriptionEN": "Platinum is a member of the platinum group of elements and group 10 of the periodic table of elements. It has six naturally occurring isotopes. It is one of the rarer elements in Earth's crust with an average abundance of approximately 5 μg/kg. It occurs in some nickel and copper ores along with some native deposits, mostly in South Africa, which accounts for 80% of the world production. Because of its scarcity in Earth's crust, only a few hundred tonnes are produced annually, and given its important uses, it is highly valuable and is a major precious metal commodity.",
+		"descriptionCN": "鉑同屬於鉑系元素和10族元素。它共有六種自然產生的同位素。鉑是地球地殼中最罕見的元素之一，平均豐度大約為5 μg/kg。它一般出現在某些鎳和銅礦石中，位於原生元素礦藏，主要分布在南非，因此當地的鉑產量佔全球的80%。鉑的年產量只有幾百噸，應用亦十分重要，因此鉑是一種非常貴重的物質和主要的貴金屬貿易商品。",
+		"floor": 50,
 		"room": "D"
 	},
 	{
 		"id": "2",
 		"name": "Luxury",
 		"imageUrl": "assets/images/apartment/apartment-luxury.jpg",
-		"description": "Luxury real estate is often defined as real property that has an appraised value of over $1 million in the United States, yet this varies greatly depending on the location. The classification also takes into account the presence of surrounding homes, amenities, views, waterfronts, absence of crime-rate, industrialization or unwanted commercialization, customizations of the home, and historical or architectural significance.",
-		"floor": 10,
+		"descriptionEN": "Luxury real estate is often defined as real property that has an appraised value of over $1 million in the United States, yet this varies greatly depending on the location. The classification also takes into account the presence of surrounding homes, amenities, views, waterfronts, absence of crime-rate, industrialization or unwanted commercialization, customizations of the home, and historical or architectural significance.",
+		"descriptionCN": "豪华住宅，简称豪宅，或称高尚住宅‎，是房地产一个用词，一般指位于高级或繁华地段，拥有良好景观、采光条件，用料及建筑过程细腻，同时住户可以享有尊贵豪华与私密、价格昂贵的住宅。另一方面，豪宅的市场是针对社会及经济地位较高的人士。不过由于地理环境与文化差异，豪宅的定义在各地都有不一样的标准。",
+		"floor": 25,
 		"room": "C"
 	},
 	{
 		"id": "3",
 		"name": "Standard",
 		"imageUrl": "assets/images/apartment/apartment-standard.jpg",
-		"description": "Enjoy a comfortable home base for your family's vacation at Aulani, A Disney Resort & Spa in Ko Olina, Hawai‘i. Standard rooms feature island décor, magical Disney touches and so much more.",
-		"floor": 5,
+		"descriptionEN": "Enjoy a comfortable home base for your family's vacation at Aulani, A Disney Resort & Spa in Ko Olina, Hawai‘i. Standard rooms feature island décor, magical Disney touches and so much more.",
+		"descriptionCN": "樂天大酒店是韓國樂天集團旗下的一家豪華酒店，成立於1973年，總部位於韓國首爾。自1979年，樂天在首爾中區開設第一家豪華酒店以來，已在韓國首爾、釜山、濟州島、蔚山等開設了多家分店。2009年，樂天大酒店在首爾麻浦區開始第一家商務酒店。2010年在俄羅斯莫斯科開設了第一家海外分店。",
+		"floor": 10,
 		"room": "A"
 	}
 ]
