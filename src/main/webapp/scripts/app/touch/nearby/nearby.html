@@ -1,4 +1,7 @@
 <div id="content-nearby">
+	<div class="title" translate="mainselection.nearby">
+		Nearby
+	</div>
 	<div id="nearby-slider-container">
 		<slick arrows="false" infinite="true" slides-to-show="{{ nearby.length < 5 ? nearby.length : 5 }}" swipe-to-slide="true" touch-move="false" dots="true">
 			<div ng-repeat="spot in nearby" class="spot-container">

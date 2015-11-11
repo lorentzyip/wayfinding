@@ -1,25 +1,30 @@
 <div id="content-apartment">
-	<div class="building-container">
-		<div class="building-image">
-		</div>
-		<div class="building-floors">
-			<div ng-repeat="floor in floors" class="dot">
+	<div class="title" translate="mainselection.apartment">
+		Apartment
+	</div>
+	<div class="apartment-container">
+		<div class="building-container">
+			<div class="building-image">
+			</div>
+			<div class="building-floors">
+				<div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === currentApartment.floor}">
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="apartment-details-container">
-		<div class="apartment-images">
-			<slick arrows="true" dots="true">
-				<div ng-repeat="apartment in apartments">
-					<img ng-src="{{ apartment.imageUrl }}">
-					<div class="apartment-description">{{ apartment.description }}</div>
-				</div>
-			</slick>
+		<div class="apartment-details-container">
+			<div class="apartment-images">
+				<slick arrows="true" dots="true" current-index="apartmentIndex">
+					<div ng-repeat="apartment in apartments">
+						<img ng-src="{{ apartment.imageUrl }}">
+						<div class="apartment-description">{{ apartment.description }}</div>
+					</div>
+				</slick>
+			</div>
+			<!--
+			<div class="apartment-description">
+				apartment description.
+			</div>
+			-->
 		</div>
-		<!--
-		<div class="apartment-description">
-			apartment description.
-		</div>
-		-->
 	</div>
 </div>
