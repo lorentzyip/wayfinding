@@ -3,6 +3,7 @@
 angular.module('wayfindingApp')
     .controller('NearbyController', function ($scope, $rootScope, $state, $translate, $timeout, $window, ngDialog, TouchService) {
         $scope.nearby = null;
+        var dialog = null;
 
         var init = function () {
             $translate.use($rootScope.language);
@@ -18,7 +19,7 @@ angular.module('wayfindingApp')
         $scope.showSpotDetails = function (id) {
             TouchService.nearbyJson.get({ spotId: id }, function (data) {
                 $scope.spot = data;
-                ngDialog.open({
+                dialog = ngDialog.open({
                     template: 'scripts/app/touch/nearby/spot.html',
                     className: 'ngdialog-theme-custom',
                     scope: $scope,
@@ -28,4 +29,8 @@ angular.module('wayfindingApp')
         };
 
         init();
+        
+        $scope.$on('IdleStart', function() { 
+            dialog.close();
+        });
     });

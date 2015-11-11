@@ -3,6 +3,7 @@
 angular.module('wayfindingApp')
     .controller('FacilitiesController', function ($scope, $rootScope, $state, $translate, $timeout, $window, ngDialog, TouchService) {
         $scope.facilities = null;
+        var dialog = null;
 
         var init = function () {
             $translate.use($rootScope.language);
@@ -19,7 +20,7 @@ angular.module('wayfindingApp')
         $scope.showFacilityDetails = function (id) {
             TouchService.facilitiesJson.get({ facilityId: id }, function (data) {
                 $scope.facility = data;
-                ngDialog.open({
+                dialog = ngDialog.open({
                     template: 'scripts/app/touch/facilities/facility.html',
                     className: 'ngdialog-theme-custom',
                     scope: $scope,
@@ -29,4 +30,8 @@ angular.module('wayfindingApp')
         };
 
         init();
+        
+        $scope.$on('IdleStart', function() { 
+            dialog.close();
+        });
     });

@@ -2,10 +2,10 @@
 
 angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate',
                'ui.bootstrap', // for modal dialogs
-               'ngDialog',
+               'ngDialog', 'ngIdle',
     'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll', 'ngAnimate', 'slick', 'ngMaterial'])
 
-    .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION) {
+    .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION, Idle) {
         $rootScope.ENV = ENV;
         $rootScope.VERSION = VERSION;
         $rootScope.$on('$stateChangeStart', function (event, toState, toStateParams) {
@@ -46,6 +46,10 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
             });
 
         });
+        
+        $rootScope.$on('IdleStart', function() {
+            $state.go('cover');
+        });
 
         $rootScope.back = function() {
             // If previous state is 'activate' or do not exist go to 'home'
@@ -55,8 +59,10 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
                 $state.go($rootScope.previousStateName, $rootScope.previousStateParams);
             }
         };
+        
+        Idle.watch();
     })
-    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $translateProvider, tmhDynamicLocaleProvider, httpRequestInterceptorCacheBusterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $translateProvider, tmhDynamicLocaleProvider, httpRequestInterceptorCacheBusterProvider, KeepaliveProvider, IdleProvider) {
 
         //enable CSRF
         $httpProvider.defaults.xsrfCookieName = 'CSRF-TOKEN';
@@ -103,5 +109,7 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
         tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
         tmhDynamicLocaleProvider.useCookieStorage();
         tmhDynamicLocaleProvider.storageKey('NG_TRANSLATE_LANG_KEY');
-
+        
+        IdleProvider.idle(60);
+        IdleProvider.timeout(0);
     });

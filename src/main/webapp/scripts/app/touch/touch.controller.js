@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('TouchController', function ($scope, $rootScope, $state, $interval, $http, $translate, $timeout, Auth, weatherService) {
+    .controller('TouchController', function ($scope, $rootScope, $state, $interval, $http, $translate, $timeout, Auth, weatherService, Idle) {
         $scope.success = null;
         $scope.error = null;
         $scope.doNotMatch = null;
@@ -49,5 +49,4 @@ angular.module('wayfindingApp')
         $scope.$on('$destroy', function() {
            $interval.cancel(stopTime);
         });
-    })
-    ;
+    });

@@ -3,6 +3,7 @@
 angular.module('wayfindingApp')
     .controller('PromotionsController', function ($scope, $rootScope, $state, $translate, $timeout, $window, ngDialog, TouchService) {
         $scope.promotions = null;
+        var dialog = null;
 
         var init = function () {
             $translate.use($rootScope.language);
@@ -31,7 +32,7 @@ angular.module('wayfindingApp')
             //$scope.promotion = TouchService.promotionsJson.get({ promotionId: id });
             TouchService.promotionsJson.get({ promotionId: id }, function (data) {
                 $scope.promotion = data;
-                ngDialog.open({
+                dialog = ngDialog.open({
                     template: 'scripts/app/touch/promotions/promotion.html',
                     //className: 'ngdialog-theme-default custom-width',
                     className: 'ngdialog-theme-custom',
@@ -40,6 +41,10 @@ angular.module('wayfindingApp')
                 });
             });
         };
+        
+        $scope.$on('IdleStart', function() { 
+            dialog.close();
+        });
 
         init();
     });

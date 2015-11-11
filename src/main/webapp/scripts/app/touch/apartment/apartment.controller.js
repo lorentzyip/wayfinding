@@ -24,7 +24,7 @@ angular.module('wayfindingApp')
 	init();
 	
 	$scope.$watch("apartmentIndex", function(newValue, oldValue) {
-		if (newValue >= 0 && $scope.apartments.length > newValue) {
+		if (newValue >= 0 && $scope.apartments) {
 			$scope.currentApartment = $scope.apartments[newValue];
 		}
 	});
