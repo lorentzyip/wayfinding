@@ -1,0 +1,18 @@
+[
+    {"row": [
+        {"value": "B", "action": "char"},
+        {"value": "G", "action": "char"},
+        {"value": "L", "action": "char"},
+        {"value": "1", "action": "char"},
+        {"value": "2", "action": "char"},
+        {"value": "3", "action": "char"},
+        {"value": "4", "action": "char"},
+        {"value": "5", "action": "char"},
+        {"value": "6", "action": "char"},
+        {"value": "7", "action": "char"},
+        {"value": "8", "action": "char"},
+        {"value": "9", "action": "char"},
+        {"value": "0", "action": "char"},
+        {"value": "←", "action": "del"}
+    ]}
+]

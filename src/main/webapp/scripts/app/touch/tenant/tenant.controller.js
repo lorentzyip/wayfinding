@@ -1,65 +1,48 @@
 'use strict';
 
 angular.module('wayfindingApp')
-    .controller('TouchTenantController', function ($scope, TouchService, ParseLinks) {
+    .controller('TouchTenantController', function ($scope, $rootScope, TouchService, ParseLinks, $http) {
         $scope.tenants = [];
         $scope.page = 0;
-        $scope.loadAll = function() {
-            TouchService.tenant.query({page: $scope.page, size: 20}, function(result, headers) {
-                $scope.links = ParseLinks.parse(headers('link'));
-                for (var i = 0; i < result.length; i++) {
-                    $scope.tenants.push(result[i]);
-                }
-            });
-        };
-        $scope.reset = function() {
-            $scope.page = 0;
-            $scope.tenants = [];
-            $scope.loadAll();
-        };
-        $scope.loadPage = function(page) {
-            $scope.page = page;
-            $scope.loadAll();
-        };
-        $scope.loadAll();
 
-        $scope.search = function () {
-            TenantSearch.query({query: $scope.searchQuery}, function(result) {
-                $scope.tenants = result;
-            }, function(response) {
-                if(response.status === 404) {
-                    $scope.loadAll();
-                }
-            });
+        $scope.data = {
+            selectedIndex: 0
+        };
+        $scope.next = function() {
+            $scope.data.selectedIndex = Math.min($scope.data.selectedIndex + 1, 2) ;
+        };
+        $scope.previous = function() {
+            $scope.data.selectedIndex = Math.max($scope.data.selectedIndex - 1, 0);
         };
 
-        $scope.refresh = function () {
-            $scope.reset();
-            $scope.clear();
-        };
 
-        $scope.clear = function () {
-            $scope.tenant = {name: null, floor: null, location: null, content: null, category: null, id: null};
-        };
-    }).controller('TabsCtrl', ['$scope', function ($scope) {
-        $scope.tabs = [{
-            title: 'By Tenant',
-            url: 'tenants.by.tenant.html'
-        }, {
-            title: 'By Category',
-            url: 'tenants.by.category.html'
-        }, {
-            title: 'By Floor',
-            url: 'tenants.by.floor.html'
-        }];
+        $http.get('assets/jsons/tenant/tenants.json').success(function(data) {
+            $scope.tenants = data;
+        });
+        $http.get('assets/jsons/tenant/searchByTenantKeyboardLayout.json').success(function(data) {
+            $scope.searchByTenantKeyboardLayout = data;
+        });
 
-        $scope.currentTab = 'tenants.by.tenant.html';
+        $http.get('assets/jsons/tenant/searchByCategoryKeyboardLayout.json').success(function(data) {
+            $scope.searchByCategoryKeyboardLayout = data;
+        });
 
-        $scope.onClickTab = function (tab) {
-            $scope.currentTab = tab.url;
+        $http.get('assets/jsons/tenant/searchByFloorKeyboardLayout.json').success(function(data) {
+            $scope.searchByFloorKeyboardLayout = data;
+        });
+
+        $scope.textKeyPressed = function(value, action){
+            $scope.someInput = value;
+            $rootScope.$broadcast('textKeyPressed', $scope.someInput, action);
         }
-
-        $scope.isActiveTab = function(tabUrl) {
-            return tabUrl == $scope.currentTab;
+        $scope.categoryKeyPressed = function(value, action){
+            $scope.someInput = value;
+            $rootScope.$broadcast('categoryKeyPressed', $scope.someInput, action);
         }
-    }]);
+        $scope.floorKeyPressed = function(value, action){
+            $scope.someInput = value;
+            $rootScope.$broadcast('floorKeyPressed', $scope.someInput, action);
+        }
+    })
+;
+

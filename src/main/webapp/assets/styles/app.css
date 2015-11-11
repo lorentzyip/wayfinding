@@ -53,7 +53,6 @@ body {
     font-family: Corbel;
     /* font-style: italic; */
     font-weight: bold;
-    outline: none;
 }
 
 .menu-button.active {
@@ -297,6 +296,133 @@ body {
     width: 100%;
 }
 
+
+#tenantSearchView {
+    border: 1px solid black;
+    clear: both;
+    padding: 0 1em;
+}
+.active {
+    background-color: #000;
+    color: #FFF;
+}
+
+/*for tabs*/
+
+#tenant-search-result-container {
+    position: absolute;
+    width: 628px;
+    height: 440px;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.3);
+    color: black;
+    border-radius: 5px;
+    font-size: large;
+}
+.tenant-detail-icon {
+    width: 102px;
+    height: 50px;
+    top: 0px;
+    left: 10px;
+    border: 0;
+    padding: 0px;
+}
+.tenant-name {
+     width: 350px;
+     height: 50px;
+     top: 0px;
+     left: 10px;
+     border: 0;
+     padding: 0px;
+ }
+.tenant-location {
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 200px;
+    border: 0;
+    padding: 10px;
+}
+#tenant-search-tabs-container {
+    position: absolute;
+    width: 628px;
+    height: 300px;
+    top: 450px;
+    right: 10px;
+    border: 0;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 5px;
+}
+
+.md-primary {
+    background-color: transparent;
+}
+.tenant-search-Tabs md-tab-content {
+    padding: 25px;
+}
+.tenant-search-Tabs .after-tabs-area > span {
+    margin-top: 25px;
+    padding-right: 15px;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 35px; }
+.tenant-search-Tabs .after-tabs-area > md-checkbox {
+    margin-top: 26px;
+    margin-left: 0;
+}
+/*for tabs end*/
+
+/*for keyboard*/
+.text-keyboard-button{
+    background-color: #66FFFF;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 3px;
+    border: solid 1px white;
+}
+.category-keyboard-button{
+    background-color: #66FFFF;
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 3px;
+    border: solid 1px white;
+}
+.floor-keyboard-button{
+    background-color: #66FFFF;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 3px;
+    border: solid 1px white;
+}
+
+.keyboard-container{
+    display: inline-block;
+    text-align: center;
+}
+
+.keyboard-container ul{
+    padding-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .tenant-details-container #footer-buttons {
     position: absolute;
     bottom: 0px;
@@ -421,14 +547,13 @@ a:hover, a:active, a:focus {
 
 img {
     border: 0;
-    outline: none;
 }
 
 .slick-dots li button:before {
     font-size: 14px;
 }
 
-.slick-slide, .slick-slide img {
+.slick-slide {
     outline: none;
 }
 
@@ -459,13 +584,3 @@ li {
     color: #696969;
 }
 */
-
-#tenantSearchView {
-    border: 1px solid black;
-    clear: both;
-    padding: 0 1em;
-}
-.active {
-    background-color: #000;
-    color: #FFF;
-}

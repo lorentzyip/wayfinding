@@ -1,0 +1,30 @@
+[
+    {
+        "id": "tenant-a",
+        "name": "tenant A",
+        "category": "tenant A",
+        "location": "G1031",
+        "floor": "G"
+    },
+    {
+        "id": "tenant-b",
+        "name": "tenant B",
+        "category": "tenant B",
+        "location": "L0157",
+        "floor": "L1"
+    },
+    {
+        "id": "tenant-c",
+        "name": "tenant C",
+        "category": "tenant C",
+        "location": "L2103",
+        "floor": "L21"
+    },
+    {
+        "id": "tenant-d",
+        "name": "tenant D",
+        "category": "tenant D",
+        "location": "L0103",
+        "floor": "L1"
+    }
+]

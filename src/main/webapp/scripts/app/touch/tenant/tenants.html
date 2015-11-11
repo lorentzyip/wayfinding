@@ -11,88 +11,70 @@
     </div>
 	<div class="tenant-details-container">
         <div id="content">
-        </div>
-        
-        <div id="footer-buttons" class="possitive">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                        <a class="btn btn-primary btn-lg btn-block" href="#" role="button">By Tenant</a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="btn btn-primary btn-lg btn-block" href="#" role="button">By Category</a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="btn btn-primary btn-lg btn-block" href="#" role="button">By Floor</a>
-                    </div>
+            <div id="tenantSearchView">
+                <div id="tenant-search-result-container">
+                    <table id="tenantSearchResults">
+                        <tr ng-repeat="tenant in tenants | filter:search">
+                            <td class="tenant-detail-icon"> </td>
+                            <td class="tenant-name">{{tenant.name}}</td>
+                            <td class="tenant-location">{{tenant.location}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="tenant-search-tabs-container">
+                <md-content class="md-padding" md-align ="bottom">
+                    <md-tabs class="md-primary" md-selected="data.selectedIndex" md-align-tabs="bottom">
+                        <md-tab id="byTenant">
+                            <md-tab-label>By Tenant</md-tab-label>
+                            <md-tab-body>
+                                <input ng-model="search.name" type="text" search-text="" style="width: 100%"/>
+                                <div >
+                                    <div class="keyboard-container">
+                                        <ul ng-repeat="row in searchByTenantKeyboardLayout" style="list-style-type: none;">
+                                            <li ng-repeat="element in row.row" class="text-keyboard-button"
+                                                ng-click="textKeyPressed(element.value, element.action)">
+                                                {{element.value}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </md-tab-body>
+                        </md-tab>
+                        <md-tab id="byCategory">
+                            <md-tab-label>By Category</md-tab-label>
+                            <md-tab-body>
+                                <div >
+                                    <div class="keyboard-container">
+                                        <ul ng-repeat="row in searchByCategoryKeyboardLayout" style="list-style-type: none;">
+                                            <li ng-repeat="element in row.row" class="category-keyboard-button"
+                                                ng-click="categoryKeyPressed(element.value, element.action)">
+                                                {{element.value}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </md-tab-body>
+                        </md-tab>
+                        <md-tab id="byFloor">
+                            <md-tab-label>By Floor</md-tab-label>
+                            <md-tab-body>
+                                <input ng-model="search.floor" type="text" search-floor="" />
+                                <div >
+                                    <div class="keyboard-container">
+                                        <ul ng-repeat="row in searchByFloorKeyboardLayout" style="list-style-type: none;">
+                                            <li ng-repeat="element in row.row" class="floor-keyboard-button"
+                                                ng-click="floorKeyPressed(element.value, element.action)">
+                                                {{element.value}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </md-tab-body>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
                 </div>
             </div>
         </div>
 	</div>
 </div>
-
-<!--
-<div>
-    <h2 translate="wayfindingApp.tenant.home.title">Tenants</h2>
-    <jh-alert></jh-alert>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                Map
-            </div>
-            <div class="col-md-4">
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th translate="global.field.id">ID</th>
-                            <th translate="tenant.name">Name</th>
-                            <th translate="tenant.location">Location</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
-                        <tr ng-repeat="tenant in tenants">
-                            <td><a ui-sref="tenant.detail({id:tenant.id})">Detail</a></td>
-                            <td>{{tenant.name}}</td>
-                            <td>{{tenant.location}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="tabs" ng-controller="TabsCtrl">
-                    <div id="tenantSearchView">
-                        <div ng-include="currentTab"></div>
-                    </div>
-                    <ul>
-                        <li ng-repeat="tab in tabs"
-                            ng-class="{active:isActiveTab(tab.url)}"
-                            ng-click="onClickTab(tab)">{{tab.title}}</li>
-                    </ul>
-                </div>
-                <script type="text/ng-template" id="tenants.by.tenant.html">
-                    <div id="tenant">
-                        <h1>By Tenant (keyboard)</h1>
-                    </div>
-                </script>
-
-                <script type="text/ng-template" id="tenants.by.category.html">
-                    <div id="category">
-                        <h1>By Category (keyboard)</h1>
-                    </div>
-                </script>
-
-                <script type="text/ng-template" id="tenants.by.floor.html">
-                    <div id="floor">
-                        <h1>By Floor (keyboard)</h1>
-                    </div>
-                </script>
-            </div>
-            </div>
-        </div>
-
-
-
-</div>
--->

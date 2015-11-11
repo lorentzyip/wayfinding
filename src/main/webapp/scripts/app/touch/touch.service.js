@@ -23,6 +23,9 @@ angular.module('wayfindingApp')
                     }
                 }
             }),
+            tenantsJson: $resource('assets/jsons/tenants/:tenantId.json', {}, {
+                'query': { method: 'GET', params: { tenantId: 'tenants' }, isArray: true }
+            }),
             promotionsJson: $resource('assets/jsons/promotions/:promotionId.json', {}, {
                 'query': { method: 'GET', params: { promotionId: 'promotions' }, isArray: true }
             }),
