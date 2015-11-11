@@ -397,6 +397,8 @@ div {
     color: black;
     border-radius: 5px;
     font-size: large;
+    overflow: auto;
+
 }
 .tenant-detail-icon {
     width: 102px;
@@ -538,7 +540,7 @@ div {
 */
 
 #promotions-slider-container, #facilities-slider-container, #nearby-slider-container {
-    margin-top: 50px; 
+    margin-top: 50px;
     width: 1920px;
 }
 
@@ -668,7 +670,7 @@ img {
     -1px -1px 0 #FFF,
     1px -1px 0 #FFF,
     -1px 1px 0 #FFF,
-    1px 1px 0 #FFF;  
+    1px 1px 0 #FFF;
 }
 
 .apartment-images .slick-prev, .apartment-images .slick-next {
@@ -750,6 +752,6 @@ li {
     animation: blinker 1s ease infinite;
 }
 
-@keyframes blinker {  
+@keyframes blinker {
     50% { opacity: 0.1; }
 }
