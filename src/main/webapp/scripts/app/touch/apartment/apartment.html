@@ -7,7 +7,7 @@
 			<div class="building-image">
 			</div>
 			<div class="building-floors">
-				<div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === currentApartment.floor}">
+				<div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === currentApartment.floor, ground: floor === 0 }" floor="{{ floor === 0? 'G' : 'L' + floor }}">
 				</div>
 			</div>
 		</div>

@@ -6,14 +6,14 @@ angular.module('wayfindingApp')
 	
 	var createFloor = function(n) {
 		var floors = [];
-		for (var i = n; i >= 1; i--) {
+		for (var i = n; i >= 0; i--) {
 			floors.push(i);
 		}
 		return floors;
 	};
 	
 	var init = function() {
-		$scope.floors = createFloor(59);
+		$scope.floors = createFloor(58);
 		$http.get('assets/jsons/apartment/apartment.json').success(function(data) {
             $scope.apartments = data;
 			$scope.currentApartment = data[0];

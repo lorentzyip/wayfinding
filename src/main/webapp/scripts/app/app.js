@@ -110,6 +110,6 @@ angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pas
         tmhDynamicLocaleProvider.useCookieStorage();
         tmhDynamicLocaleProvider.storageKey('NG_TRANSLATE_LANG_KEY');
         
-        IdleProvider.idle(60);
+        IdleProvider.idle(5 * 60);
         IdleProvider.timeout(0);
     });

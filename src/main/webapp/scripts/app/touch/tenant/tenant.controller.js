@@ -63,14 +63,14 @@ angular.module('wayfindingApp')
 
         var createFloor = function(n) {
             var floors = [];
-            for (var i = 1; i <= n; i++) {
+            for (var i = n; i >= 0; i--) {
                 floors.push(i);
             }
             return floors;
         };
 
         var init = function() {
-            $scope.floors = createFloor(59);
+            $scope.floors = createFloor(58);
         };
 
         init();

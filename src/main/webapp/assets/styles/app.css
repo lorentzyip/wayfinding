@@ -279,7 +279,7 @@ div {
 }
 
 .building-container {
-    width: 317px;
+    width: 347px;
     height: 100%;
     float: left;
     background-color: rgba(255,255,255,0.4);
@@ -292,7 +292,7 @@ div {
     float: left;
     margin-top: 75px;
     margin-left: 20px;
-    width: 240px;
+    width: 250px;
     height: 675px;
 }
 
@@ -300,13 +300,12 @@ div {
     float: left;
     margin-top: 75px;
     margin-left: 0px;
-    width: 20px;
     /* background-color: darkslateblue; */
 }
 
 .apartment-details-container {
     margin-left: 5px;
-    width: 1578px;
+    width: 1548px;
     height: 100%;
     float: left;
     background-color: rgba(255,255,255,0.4);
@@ -315,7 +314,7 @@ div {
 
 .apartment-images {
     margin-top: 10px;
-    margin-left: 106px;
+    margin-left: 91px;
     width: 1366px;
     height: 768px;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
@@ -346,11 +345,29 @@ div {
 }
 
 .tenant-map-container {
+    position: relative;
     margin-left: 5px;
-    width: 945px;
+    width: 915px;
     height: 100%;
     float: left;
     background-color: rgba(255,255,255,0.3);
+}
+
+.from-map-container {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.from-map-container img, .to-map-container img {
+    width: 500px;
+    height: 500px;
+}
+
+.to-map-container {
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
 
 .tenant-details-container {
@@ -680,11 +697,11 @@ img {
 }
 
 .apartment-images .slick-prev {
-    left: -90px;
+    left: -85px;
 }
 
 .apartment-images .slick-next {
-    right: -90px;
+    right: -85px;
 }
 
 .apartment-images .slick-prev:before, .apartment-images .slick-next:before {
@@ -739,6 +756,7 @@ li {
 }
 
 .dot {
+    position: relative;
     background-image: url("../images/dot-gray.png");
     background-size: 9px 9px;
     background-repeat: no-repeat;
@@ -749,9 +767,41 @@ li {
 
 .dot.active {
     background-image: url("../images/dot-red.png");
-    animation: blinker 1s ease infinite;
+    animation: blinker 2s linear infinite;
+}
+
+.dot.ground {
+    background-image: url("../images/dot-blue.png");
+}
+
+.dot.active::after, .dot.ground::after {
+    position: absolute;
+    background-image: url("../images/building-level-pointer.png");
+    background-size: 54px 49px;
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 49px;
+    line-height: 49px;
+    content: attr(floor);
+    display: block;
+    top: -18px;
+    left: 12px;
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+.dot.active::before, .dot.ground::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/building-level-highlight.png");
+    width: 111px;
+    height: 9px;
+    display: block;
+    right: 12px;
 }
 
 @keyframes blinker {
-    50% { opacity: 0.1; }
+    40% { opacity: 0.4; }
 }
