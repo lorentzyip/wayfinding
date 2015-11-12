@@ -17,13 +17,20 @@
             <div id="content">
                 <div id="tenantSearchView">
                     <div id="tenant-search-result-container">
-                        <table id="tenantSearchResults">
-                            <tr ng-repeat="tenant in tenants | filter:search">
-                                <td class="tenant-detail-icon"> </td>
-                                <td class="tenant-name">{{tenant.name}}</td>
-                                <td class="tenant-location">{{tenant.location}}</td>
-                            </tr>
-                        </table>
+                        <!--<table id="tenantSearchResults">-->
+                            <!--<tr ng-repeat="tenant in tenants | filter:searchModel">-->
+                                <!--<td class="tenant-detail-icon"> </td>-->
+                                <!--<td class="tenant-name">{{tenant.name}}</td>-->
+                                <!--<td class="tenant-location">{{tenant.location}}</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <md-list ng-ng-cloak>
+                            <md-list-item ng-repeat="tenant in tenants | filter:searchModel" ng-click="selectTenant(tenant)">
+                                <p class="tenant-detail-icon" ng-src="{{ tenant.img }}"> </p>
+                                <p class="tenant-name">{{ tenant.name }}</p>
+                                <p class="tenant-location">{{ tenant.location }}</p>
+                            </md-list-item>
+                        </md-list>
                     </div>
                     <div id="tenant-search-tabs-container">
                     <md-content class="md-padding" md-align ="bottom">
@@ -31,7 +38,7 @@
                             <md-tab id="byTenant">
                                 <md-tab-label>By Tenant</md-tab-label>
                                 <md-tab-body>
-                                    <input ng-model="search.name" type="text" search-text="" style="width: 100%"/>
+                                    <input ng-model="searchModel.name" type="text" search-text="" style="width: 100%"/>
                                     <div >
                                         <div class="keyboard-container">
                                             <ul ng-repeat="row in searchByTenantKeyboardLayout" style="list-style-type: none;">
@@ -47,6 +54,7 @@
                             <md-tab id="byCategory">
                                 <md-tab-label>By Category</md-tab-label>
                                 <md-tab-body>
+                                    <input ng-model="searchModel.category" type="text" search-category="" hidden/>
                                     <div >
                                         <div class="keyboard-container">
                                             <ul ng-repeat="row in searchByCategoryKeyboardLayout" style="list-style-type: none;">
@@ -62,7 +70,7 @@
                             <md-tab id="byFloor">
                                 <md-tab-label>By Floor</md-tab-label>
                                 <md-tab-body>
-                                    <input ng-model="search.floor" type="text" search-floor="" />
+                                    <input ng-model="searchModel.location" type="text" search-floor="" />
                                     <div >
                                         <div class="keyboard-container">
                                             <ul ng-repeat="row in searchByFloorKeyboardLayout" style="list-style-type: none;">
