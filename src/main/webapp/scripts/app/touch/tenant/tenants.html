@@ -41,9 +41,9 @@
                     </div>
                     <div id="tenant-search-tabs-container">
                     <md-content class="md-padding" md-align ="bottom">
-                        <md-tabs class="md-primary" md-selected="data.selectedIndex" md-align-tabs="bottom">
+                        <md-tabs class="md-primary" md-selected="tabs.selectedIndex" md-align-tabs="bottom" >
                             <md-tab id="byTenant">
-                                <md-tab-label>By Tenant</md-tab-label>
+                                <md-tab-label ng-click="reset()">By Tenant</md-tab-label>
                                 <md-tab-body>
                                     <input ng-model="searchModel.Nameen_us" type="text" search-text="" style="width: 100%"/>
                                     <div >
@@ -59,7 +59,7 @@
                                 </md-tab-body>
                             </md-tab>
                             <md-tab id="byCategory">
-                                <md-tab-label>By Category</md-tab-label>
+                                <md-tab-label >By Category</md-tab-label>
                                 <md-tab-body>
                                     <input ng-model="searchModel.ShopCategory" type="text" search-category="" hidden/>
                                     <div >

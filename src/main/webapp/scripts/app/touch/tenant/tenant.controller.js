@@ -5,7 +5,7 @@ angular.module('wayfindingApp')
         $scope.tenants = [];
         $scope.page = 0;
         $scope.tenantSelected = '';
-        $scope.data = {
+        $scope.tabs = {
             selectedIndex: 0
         };
         $scope.next = function() {
@@ -42,30 +42,21 @@ angular.module('wayfindingApp')
             if(action ==='del'){
                 $scope.searchModel.Nameen_us = $scope.searchModel.Nameen_us.substr(0, $scope.searchModel.Nameen_us.length-1)
             }else if(action ==='clear'){
-                $scope.searchModel.Nameen_us = '';
-                $scope.searchModel.RoomNO = '';
-                $scope.searchModel.ShopCategory = '';
+                $scope.reset();
             }
             else{
                 $scope.searchModel.Nameen_us = $scope.searchModel.Nameen_us + value;
             }
-            $scope.searchModel.RoomNO = '';
-            $scope.searchModel.ShopCategory = '';
         };
         $scope.categoryKeyPressed = function(value, action){
-            $scope.searchModel.Nameen_us = '';
-            $scope.searchModel.RoomNO = '';
+            $scope.reset();
             $scope.searchModel.ShopCategory = value;
         };
         $scope.floorKeyPressed = function(value, action){
-            $scope.searchModel.Nameen_us = '';
-            $scope.searchModel.ShopCategory = '';
             if(action ==='del'){
                 $scope.searchModel.RoomNO = $scope.searchModel.RoomNO.substr(0, $scope.searchModel.RoomNO.length-1)
             }else if(action ==='clear'){
-                $scope.searchModel.Nameen_us = '';
-                $scope.searchModel.RoomNO = '';
-                $scope.searchModel.ShopCategory = '';
+                $scope.reset();
             }else{
                 $scope.searchModel.RoomNO = $scope.searchModel.RoomNO + value;
             }
@@ -73,6 +64,15 @@ angular.module('wayfindingApp')
         $scope.selectTenant = function(tenant){
             $scope.tenantSelected = tenant;
         };
+        $scope.reset = function(){
+            $scope.searchModel.Nameen_us = '';
+            $scope.searchModel.RoomNO = '';
+            $scope.searchModel.ShopCategory = '';
+        };
+
+        $scope.$watch('tabs.selectedIndex', function(current, old) {
+            $scope.reset();
+        });
 
         var createFloor = function(n) {
             var floors = [];

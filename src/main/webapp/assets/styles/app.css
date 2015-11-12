@@ -401,7 +401,9 @@ div {
 }
 
 /*for tabs*/
-
+.md-tab{
+    text-transform: none
+}
 #tenant-search-result-container {
     position: absolute;
     width: 628px;
