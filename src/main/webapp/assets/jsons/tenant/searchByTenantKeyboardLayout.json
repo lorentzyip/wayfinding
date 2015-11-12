@@ -1,45 +1,204 @@
 [
-    {"row":[
-        {"value": "A","action": "char"},
-        {"value": "B","action": "char"},
-        {"value": "C","action": "char"},
-        {"value": "D","action": "char"},
-        {"value": "E","action": "char"},
-        {"value": "F","action": "char"},
-        {"value": "G","action": "char"},
-        {"value": "H","action": "char"},
-        {"value": "I","action": "char"},
-        {"value": "J","action": "char"},
-        {"value": "K","action": "char"},
-        {"value": "L","action": "char"},
-        {"value": "M","action": "char"}
-    ]},
-    {"row":[
-        {"value": "N","action": "char"},
-        {"value": "O","action": "char"},
-        {"value": "P","action": "char"},
-        {"value": "Q","action": "char"},
-        {"value": "R","action": "char"},
-        {"value": "S","action": "char"},
-        {"value": "T","action": "char"},
-        {"value": "U","action": "char"},
-        {"value": "V","action": "char"},
-        {"value": "W","action": "char"},
-        {"value": "X","action": "char"},
-        {"value": "Y","action": "char"},
-        {"value": "Z","action": "char"}
-    ]},
-    {"row": [
-        {"value": "1", "action": "char"},
-        {"value": "2", "action": "char"},
-        {"value": "3", "action": "char"},
-        {"value": "4", "action": "char"},
-        {"value": "5", "action": "char"},
-        {"value": "6", "action": "char"},
-        {"value": "7", "action": "char"},
-        {"value": "8", "action": "char"},
-        {"value": "9", "action": "char"},
-        {"value": "0", "action": "char"},
-        {"value": "←", "action": "del"}
-    ]}
+    {
+        "row": [
+            {
+                "value": "A",
+                "description": "A",
+                "action": "char"
+            },
+            {
+                "value": "B",
+                "description": "B",
+                "action": "char"
+            },
+            {
+                "value": "C",
+                "description": "C",
+                "action": "char"
+            },
+            {
+                "value": "D",
+                "description": "D",
+                "action": "char"
+            },
+            {
+                "value": "E",
+                "description": "E",
+                "action": "char"
+            },
+            {
+                "value": "F",
+                "description": "F",
+                "action": "char"
+            },
+            {
+                "value": "G",
+                "description": "G",
+                "action": "char"
+            },
+            {
+                "value": "H",
+                "description": "H",
+                "action": "char"
+            },
+            {
+                "value": "I",
+                "description": "I",
+                "action": "char"
+            },
+            {
+                "value": "J",
+                "description": "J",
+                "action": "char"
+            },
+            {
+                "value": "K",
+                "description": "K",
+                "action": "char"
+            },
+            {
+                "value": "L",
+                "description": "L",
+                "action": "char"
+            },
+            {
+                "value": "M",
+                "description": "M",
+                "action": "char"
+            }
+        ]
+    },
+    {
+        "row": [
+            {
+                "value": "N",
+                "description": "N",
+                "action": "char"
+            },
+            {
+                "value": "O",
+                "description": "O",
+                "action": "char"
+            },
+            {
+                "value": "P",
+                "description": "P",
+                "action": "char"
+            },
+            {
+                "value": "Q",
+                "description": "Q",
+                "action": "char"
+            },
+            {
+                "value": "R",
+                "description": "R",
+                "action": "char"
+            },
+            {
+                "value": "S",
+                "description": "S",
+                "action": "char"
+            },
+            {
+                "value": "T",
+                "description": "T",
+                "action": "char"
+            },
+            {
+                "value": "U",
+                "description": "U",
+                "action": "char"
+            },
+            {
+                "value": "V",
+                "description": "V",
+                "action": "char"
+            },
+            {
+                "value": "W",
+                "description": "W",
+                "action": "char"
+            },
+            {
+                "value": "X",
+                "description": "X",
+                "action": "char"
+            },
+            {
+                "value": "Y",
+                "description": "Y",
+                "action": "char"
+            },
+            {
+                "value": "Z",
+                "description": "Z",
+                "action": "char"
+            }
+        ]
+    },
+    {
+        "row": [
+            {
+                "value": "1",
+                "description": "1",
+                "action": "char"
+            },
+            {
+                "value": "2",
+                "description": "2",
+                "action": "char"
+            },
+            {
+                "value": "3",
+                "description": "3",
+                "action": "char"
+            },
+            {
+                "value": "4",
+                "description": "4",
+                "action": "char"
+            },
+            {
+                "value": "5",
+                "description": "5",
+                "action": "char"
+            },
+            {
+                "value": "6",
+                "description": "6",
+                "action": "char"
+            },
+            {
+                "value": "7",
+                "description": "7",
+                "action": "char"
+            },
+            {
+                "value": "8",
+                "description": "8",
+                "action": "char"
+            },
+            {
+                "value": "9",
+                "description": "9",
+                "action": "char"
+            },
+            {
+                "value": "0",
+                "description": "0",
+                "action": "char"
+            },
+            {
+                "value": "←",
+                "description": "←",
+                "action": "del"
+            },
+            {
+                "value": "Clear",
+                "description": "Clear",
+                "action": "clear"
+            }
+        ]
+    }
 ]

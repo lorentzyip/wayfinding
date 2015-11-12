@@ -1,18 +1,81 @@
 [
-    {"row": [
-        {"value": "B", "action": "char"},
-        {"value": "G", "action": "char"},
-        {"value": "L", "action": "char"},
-        {"value": "1", "action": "char"},
-        {"value": "2", "action": "char"},
-        {"value": "3", "action": "char"},
-        {"value": "4", "action": "char"},
-        {"value": "5", "action": "char"},
-        {"value": "6", "action": "char"},
-        {"value": "7", "action": "char"},
-        {"value": "8", "action": "char"},
-        {"value": "9", "action": "char"},
-        {"value": "0", "action": "char"},
-        {"value": "←", "action": "del"}
-    ]}
+    {
+        "row": [
+            {
+                "value": "B",
+                "description": "B",
+                "action": "char"
+            },
+            {
+                "value": "G",
+                "description": "G",
+                "action": "char"
+            },
+            {
+                "value": "L",
+                "description": "L",
+                "action": "char"
+            },
+            {
+                "value": "1",
+                "description": "1",
+                "action": "char"
+            },
+            {
+                "value": "2",
+                "description": "2",
+                "action": "char"
+            },
+            {
+                "value": "3",
+                "description": "3",
+                "action": "char"
+            },
+            {
+                "value": "4",
+                "description": "4",
+                "action": "char"
+            },
+            {
+                "value": "5",
+                "description": "5",
+                "action": "char"
+            },
+            {
+                "value": "6",
+                "description": "6",
+                "action": "char"
+            },
+            {
+                "value": "7",
+                "description": "7",
+                "action": "char"
+            },
+            {
+                "value": "8",
+                "description": "8",
+                "action": "char"
+            },
+            {
+                "value": "9",
+                "description": "9",
+                "action": "char"
+            },
+            {
+                "value": "0",
+                "description": "0",
+                "action": "char"
+            },
+            {
+                "value": "←",
+                "description": "←",
+                "action": "del"
+            },
+            {
+                "value": "Clear",
+                "description": "Clear",
+                "action": "clear"
+            }
+        ]
+    }
 ]
