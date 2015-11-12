@@ -2,29 +2,43 @@
     {
         "id": "tenant-a",
         "name": "tenant A",
-        "category": "tenant A",
+        "category": "Insurance",
         "location": "G1031",
         "floor": "G"
     },
     {
         "id": "tenant-b",
         "name": "tenant B",
-        "category": "tenant B",
+        "category": "Services",
         "location": "L0157",
         "floor": "L1"
     },
     {
         "id": "tenant-c",
         "name": "tenant C",
-        "category": "tenant C",
+        "category": "Dining",
         "location": "L2103",
         "floor": "L21"
     },
     {
         "id": "tenant-d",
         "name": "tenant D",
-        "category": "tenant D",
+        "category": "Entertainment",
         "location": "L0103",
         "floor": "L1"
+    },
+    {
+        "id": "tenant-e",
+        "name": "tenant E",
+        "category": "Entertainment",
+        "location": "L1950",
+        "floor": "L19"
+    },
+    {
+        "id": "tenant-f",
+        "name": "tenant F",
+        "category": "Insurance",
+        "location": "L2203",
+        "floor": "L22"
     }
 ]
