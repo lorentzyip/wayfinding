@@ -16,8 +16,8 @@ angular.module('wayfindingApp')
         };
 
 
-        $http.get('assets/jsons/tenant/tenants.json').success(function(data) {
-            $scope.tenants = data;
+        $http.get('assets/jsons/tenant/Tenant_Infor.json').success(function(data) {
+            $scope.tenants = data.Tenant_Infor;
         });
         $http.get('assets/jsons/tenant/searchByTenantKeyboardLayout.json').success(function(data) {
             $scope.searchByTenantKeyboardLayout = data;
@@ -30,31 +30,44 @@ angular.module('wayfindingApp')
         });
 
         $scope.searchModel = {
-            name: '',
-            location : '',
-            category : '',
+            //name: '',
+            //location : '',
+            //category : ''
+            Nameen_us : '',
+            RoomNO : '',
+            floor : '',
+            ShopCategory : ''
         };
         $scope.textKeyPressed = function(value, action){
             if(action ==='del'){
-                $scope.searchModel.name = $scope.searchModel.name.substr(0, $scope.searchModel.name.length-1)
-            }else{
-                $scope.searchModel.name = $scope.searchModel.name + value;
+                $scope.searchModel.Nameen_us = $scope.searchModel.Nameen_us.substr(0, $scope.searchModel.Nameen_us.length-1)
+            }else if(action ==='clear'){
+                $scope.searchModel.Nameen_us = '';
+                $scope.searchModel.RoomNO = '';
+                $scope.searchModel.ShopCategory = '';
             }
-            $scope.searchModel.category = '';
-            $scope.searchModel.location = '';
+            else{
+                $scope.searchModel.Nameen_us = $scope.searchModel.Nameen_us + value;
+            }
+            $scope.searchModel.RoomNO = '';
+            $scope.searchModel.ShopCategory = '';
         };
         $scope.categoryKeyPressed = function(value, action){
-            $scope.searchModel.name = '';
-            $scope.searchModel.category = value;
-            $scope.searchModel.location = '';
+            $scope.searchModel.Nameen_us = '';
+            $scope.searchModel.RoomNO = '';
+            $scope.searchModel.ShopCategory = value;
         };
         $scope.floorKeyPressed = function(value, action){
-            $scope.searchModel.name = '';
-            $scope.searchModel.category = '';
+            $scope.searchModel.Nameen_us = '';
+            $scope.searchModel.ShopCategory = '';
             if(action ==='del'){
-                $scope.searchModel.location = $scope.searchModel.location.substr(0, $scope.searchModel.location.length-1)
+                $scope.searchModel.RoomNO = $scope.searchModel.RoomNO.substr(0, $scope.searchModel.RoomNO.length-1)
+            }else if(action ==='clear'){
+                $scope.searchModel.Nameen_us = '';
+                $scope.searchModel.RoomNO = '';
+                $scope.searchModel.ShopCategory = '';
             }else{
-                $scope.searchModel.location = $scope.searchModel.location + value;
+                $scope.searchModel.RoomNO = $scope.searchModel.RoomNO + value;
             }
         };
         $scope.selectTenant = function(tenant){

@@ -26,9 +26,10 @@
                         <!--</table>-->
                         <md-list ng-ng-cloak>
                             <md-list-item ng-repeat="tenant in tenants | filter:searchModel" ng-click="selectTenant(tenant)">
-                                <p class="tenant-detail-icon" ng-src="{{ tenant.img }}"> </p>
-                                <p class="tenant-name">{{ tenant.name }}</p>
-                                <p class="tenant-location">{{ tenant.location }}</p>
+                                <!--<p class="tenant-detail-icon" ng-src="{{ tenant.img }}"> </p>-->
+                                <!--<p class="tenant-name">{{ language == 'en' ? tenant.Nameen_us : tenant.Namezh_cn }}</p>-->
+                                <p class="tenant-name">{{ tenant.Nameen_us }}</p>
+                                <p class="tenant-location">{{ tenant.RoomNO }}</p>
                             </md-list-item>
                         </md-list>
                     </div>
@@ -38,13 +39,13 @@
                             <md-tab id="byTenant">
                                 <md-tab-label>By Tenant</md-tab-label>
                                 <md-tab-body>
-                                    <input ng-model="searchModel.name" type="text" search-text="" style="width: 100%"/>
+                                    <input ng-model="searchModel.Nameen_us" type="text" search-text="" style="width: 100%"/>
                                     <div >
                                         <div class="keyboard-container">
                                             <ul ng-repeat="row in searchByTenantKeyboardLayout" style="list-style-type: none;">
                                                 <li ng-repeat="element in row.row" class="text-keyboard-button"
                                                     ng-click="textKeyPressed(element.value, element.action)">
-                                                    {{element.value}}
+                                                    {{element.description}}
                                                 </li>
                                             </ul>
                                         </div>
@@ -54,13 +55,13 @@
                             <md-tab id="byCategory">
                                 <md-tab-label>By Category</md-tab-label>
                                 <md-tab-body>
-                                    <input ng-model="searchModel.category" type="text" search-category="" hidden/>
+                                    <input ng-model="searchModel.ShopCategory" type="text" search-category="" hidden/>
                                     <div >
                                         <div class="keyboard-container">
                                             <ul ng-repeat="row in searchByCategoryKeyboardLayout" style="list-style-type: none;">
                                                 <li ng-repeat="element in row.row" class="category-keyboard-button"
                                                     ng-click="categoryKeyPressed(element.value, element.action)">
-                                                    {{element.value}}
+                                                    {{element.description}}
                                                 </li>
                                             </ul>
                                         </div>
@@ -70,13 +71,13 @@
                             <md-tab id="byFloor">
                                 <md-tab-label>By Floor</md-tab-label>
                                 <md-tab-body>
-                                    <input ng-model="searchModel.location" type="text" search-floor="" />
+                                    <input ng-model="searchModel.RoomNO" type="text" search-floor="" />
                                     <div >
                                         <div class="keyboard-container">
                                             <ul ng-repeat="row in searchByFloorKeyboardLayout" style="list-style-type: none;">
                                                 <li ng-repeat="element in row.row" class="floor-keyboard-button"
                                                     ng-click="floorKeyPressed(element.value, element.action)">
-                                                    {{element.value}}
+                                                    {{element.description}}
                                                 </li>
                                             </ul>
                                         </div>
