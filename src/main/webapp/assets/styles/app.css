@@ -350,7 +350,7 @@ div {
     width: 915px;
     height: 100%;
     float: left;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4);
 }
 
 .from-map-container {
@@ -376,17 +376,37 @@ div {
     width: 628px;
     height: 100%;
     float: left;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4);
 }
 
-.tenant-details-container #content {
+.tenant-map-pointer-left,
+.tenant-map-pointer-right {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    padding: 5px;
-    /* height: 764px; */
-    height: 100%;
-    width: 100%;
+    width: 147px;
+    height: 49px;
+    line-height: 49px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: italic;
+    animation: blinker 2s linear infinite;
+}
+
+.tenant-map-pointer-right {
+    background-image: url("../images/map-level-pointer-right.png");
+    background-size: 147px 49px;
+    background-repeat: no-repeat;
+    text-align: left;
+    padding-left: 75px;
+    transform: translate(-100%, -50%);
+}
+
+.tenant-map-pointer-left {
+    background-image: url("../images/map-level-pointer-left.png");
+    background-size: 147px 49px;
+    background-repeat: no-repeat;
+    text-align: right;
+    padding-right: 75px;
+    transform: translate(0, -50%);
 }
 
 /*for tabs*/
@@ -394,8 +414,11 @@ div {
     text-transform: none
 }
 #tenant-search-result-container {
-    width: 100%;
-    height: 440px;
+    position: absolute;
+    width: 618px;
+    top: 5px;
+    left: 5px;
+    bottom: 310px;
     border: 0;
     background-color: rgba(255,255,255,0.3);
     color: black;
@@ -407,29 +430,37 @@ div {
 .tenant-detail-icon {
     width: 102px;
     height: 50px;
-    top: 0px;
-    left: 10px;
     border: 0;
     padding: 0px;
 }
+
+.tenant-list-item {
+    border-bottom: 1px solid #000;
+}
+
+.tenant-name,
+.tenant-location {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .tenant-name {
-     width: 400px;
-     height: 50px;
-     top: 0px;
-     left: 10px;
+     width: 80%;
+     /* height: 50px; */
      border: 0;
-     padding: 0px;
+     padding: 5px;
  }
 .tenant-location {
-    width: 50px;
-    height: 50px;
-    top: 10px;
-    left: 200px;
+    width: 20%;
+    /* height: 50px; */
     border: 0;
-    padding: 10px;
+    padding: 5px;
 }
 #tenant-search-tabs-container {
-    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 618px;
     height: 300px;
     border: 0;
     background-color: rgba(255,255,255,0.3);
@@ -457,7 +488,8 @@ div {
 
 /*for keyboard*/
 .text-keyboard-button{
-    background-color: #66FFFF;
+    background-color: #0f5b9c;
+    color: #FFF;
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -624,6 +656,7 @@ div {
     top: 0;
     left: 0;
 }
+
 [ui-view].ng-enter,
 [ui-view].ng-leave {
     -webkit-transition: all 1s ease;
@@ -642,6 +675,30 @@ div {
 }
 [ui-view].ng-leave-active {
     left: -100%;    /*final css for view transition out*/
+}
+
+.to-map-container.ng-enter,
+.to-map-container.ng-leave {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.to-map-container.ng-enter {
+    right: -500px;     /*initial css for view transition in*/
+    opacity: 0;
+}
+.to-map-container.ng-leave {
+    right: 0;        /*initial css for view transition out*/
+    opacity: 1;
+}
+.to-map-container.ng-enter-active {
+    right: 0;        /*final css for view transition in*/
+    opacity: 1;
+}
+.to-map-container.ng-leave-active {
+    right: 500px;    /*final css for view transition out*/
+    opacity: 0;
 }
 
 a:hover, a:active, a:focus {
@@ -789,3 +846,4 @@ li {
 @keyframes blinker {
     40% { opacity: 0.4; }
 }
+

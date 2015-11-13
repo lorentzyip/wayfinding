@@ -7,7 +7,7 @@
             <div class="building-image">
             </div>
             <div class="building-floors">
-                <div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === currentApartment.floor, ground: floor === 0}" floor="{{ floor === 0? 'G' : 'L' + floor }}">
+                <div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === selectedFloor, ground: floor === 0}" floor="{{ floor === 0? 'G' : 'L' + floor }}">
                 </div>
             </div>
         </div>
@@ -15,80 +15,81 @@
             <div class="from-map-container">
                 <img ng-src="assets/images/floor-plan/0.png">
             </div>
-            <div class="to-map-container">
-                <img ng-src="assets/images/floor-plan/11.png">
+            <div ng-repeat="floorPlan in floorPlans" class="to-map-container" ng-if="showFloorPlan(floorPlan.floorNum)">
+                <img ng-src="{{ floorPlan.floorPlanImageUrl }}">
+                <div class="tenant-map-pointer-right" ng-style="selectedRoomCoord">
+                    {{ selectedRoom }}
+                </div>
             </div>
         </div>
         <div class="tenant-details-container">
-            <div id="content">
-                <div id="tenant-search-result-container">
-                    <!--<table id="tenantSearchResults">-->
-                    <!--<tr ng-repeat="tenant in tenants | filter:searchModel">-->
-                    <!--<td class="tenant-detail-icon"> </td>-->
-                    <!--<td class="tenant-name">{{tenant.name}}</td>-->
-                    <!--<td class="tenant-location">{{tenant.location}}</td>-->
-                    <!--</tr>-->
-                    <!--</table>-->
-                    <md-list ng-ng-cloak>
-                        <md-list-item ng-repeat="tenant in tenants | filter:searchModel" ng-click="selectTenant(tenant)">
-                            <!--<p class="tenant-detail-icon" ng-src="{{ tenant.img }}"> </p>-->
-                            <!--<p class="tenant-name">{{ language == 'en' ? tenant.Nameen_us : tenant.Namezh_cn }}</p>-->
-                            <p class="tenant-name">{{ tenant.Nameen_us }}</p>
-                            <p class="tenant-location">{{ tenant.RoomNO }}</p>
-                        </md-list-item>
-                    </md-list>
-                </div>
-                <div id="tenant-search-tabs-container">
-                    <md-content md-align="bottom">
-                        <md-tabs class="md-primary" md-selected="tabs.selectedIndex" md-align-tabs="bottom">
-                            <md-tab id="byTenant">
-                                <md-tab-label ng-click="reset()">By Tenant</md-tab-label>
-                                <md-tab-body>
-                                    <input ng-model="searchModel.Nameen_us" type="text" search-text="" style="width: 100%" />
-                                    <div>
-                                        <div class="keyboard-container">
-                                            <ul ng-repeat="row in searchByTenantKeyboardLayout" style="list-style-type: none;">
-                                                <li ng-repeat="element in row.row" class="text-keyboard-button" ng-click="textKeyPressed(element.value, element.action)">
-                                                    {{element.description}}
-                                                </li>
-                                            </ul>
-                                        </div>
+            <div id="tenant-search-result-container">
+                <!--<table id="tenantSearchResults">-->
+                <!--<tr ng-repeat="tenant in tenants | filter:searchModel">-->
+                <!--<td class="tenant-detail-icon"> </td>-->
+                <!--<td class="tenant-name">{{tenant.name}}</td>-->
+                <!--<td class="tenant-location">{{tenant.location}}</td>-->
+                <!--</tr>-->
+                <!--</table>-->
+                <md-list ng-ng-cloak>
+                    <md-list-item class="tenant-list-item" ng-repeat="tenant in tenants | filter:searchModel | orderBy:'Nameen_us'" ng-click="selectTenant(tenant)">
+                        <!--<p class="tenant-detail-icon" ng-src="{{ tenant.img }}"> </p>-->
+                        <!--<p class="tenant-name">{{ language == 'en' ? tenant.Nameen_us : tenant.Namezh_cn }}</p>-->
+                        <div class="tenant-name">{{ language === 'en' ? tenant.Nameen_us : tenant.Namezh_cn }}</div>
+                        <div class="tenant-location">{{ tenant.RoomNO }}</div>
+                    </md-list-item>
+                </md-list>
+            </div>
+            <div id="tenant-search-tabs-container">
+                <md-content class="md-padding" md-align="bottom">
+                    <md-tabs class="md-primary" md-selected="tabs.selectedIndex" md-align-tabs="bottom">
+                        <md-tab id="byTenant">
+                            <md-tab-label ng-click="reset()">By Tenant</md-tab-label>
+                            <md-tab-body>
+                                <input ng-model="searchModel.Nameen_us" type="text" search-text="" class="form-control" />
+                                <div>
+                                    <div class="keyboard-container">
+                                        <ul ng-repeat="row in searchByTenantKeyboardLayout" style="list-style-type: none;">
+                                            <li ng-repeat="element in row.row" class="text-keyboard-button" ng-click="textKeyPressed(element.value, element.action)">
+                                                {{element.description}}
+                                            </li>
+                                        </ul>
                                     </div>
-                                </md-tab-body>
-                            </md-tab>
-                            <md-tab id="byCategory">
-                                <md-tab-label>By Category</md-tab-label>
-                                <md-tab-body>
-                                    <input ng-model="searchModel.ShopCategory" type="text" search-category="" hidden/>
-                                    <div>
-                                        <div class="keyboard-container">
-                                            <ul ng-repeat="row in searchByCategoryKeyboardLayout" style="list-style-type: none;">
-                                                <li ng-repeat="element in row.row" class="category-keyboard-button" ng-click="categoryKeyPressed(element.value, element.action)">
-                                                    {{element.description}}
-                                                </li>
-                                            </ul>
-                                        </div>
+                                </div>
+                            </md-tab-body>
+                        </md-tab>
+                        <md-tab id="byCategory">
+                            <md-tab-label>By Category</md-tab-label>
+                            <md-tab-body>
+                                <input ng-model="searchModel.ShopCategory" type="text" search-category="" hidden/>
+                                <div>
+                                    <div class="keyboard-container">
+                                        <ul ng-repeat="row in searchByCategoryKeyboardLayout" style="list-style-type: none;">
+                                            <li ng-repeat="element in row.row" class="category-keyboard-button" ng-click="categoryKeyPressed(element.value, element.action)">
+                                                {{element.description}}
+                                            </li>
+                                        </ul>
                                     </div>
-                                </md-tab-body>
-                            </md-tab>
-                            <md-tab id="byFloor">
-                                <md-tab-label>By Floor</md-tab-label>
-                                <md-tab-body>
-                                    <input ng-model="searchModel.RoomNO" type="text" search-floor="" />
-                                    <div>
-                                        <div class="keyboard-container">
-                                            <ul ng-repeat="row in searchByFloorKeyboardLayout" style="list-style-type: none;">
-                                                <li ng-repeat="element in row.row" class="floor-keyboard-button" ng-click="floorKeyPressed(element.value, element.action)">
-                                                    {{element.description}}
-                                                </li>
-                                            </ul>
-                                        </div>
+                                </div>
+                            </md-tab-body>
+                        </md-tab>
+                        <md-tab id="byFloor">
+                            <md-tab-label>By Floor</md-tab-label>
+                            <md-tab-body>
+                                <input ng-model="searchModel.RoomNO" type="text" search-floor="" />
+                                <div>
+                                    <div class="keyboard-container">
+                                        <ul ng-repeat="row in searchByFloorKeyboardLayout" style="list-style-type: none;">
+                                            <li ng-repeat="element in row.row" class="floor-keyboard-button" ng-click="floorKeyPressed(element.value, element.action)">
+                                                {{element.description}}
+                                            </li>
+                                        </ul>
                                     </div>
-                                </md-tab-body>
-                            </md-tab>
-                        </md-tabs>
-                    </md-content>
-                </div>
+                                </div>
+                            </md-tab-body>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
             </div>
         </div>
     </div>
