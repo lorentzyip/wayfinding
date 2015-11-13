@@ -106,8 +106,11 @@ angular.module('wayfindingApp')
             }
         };
         $scope.categoryKeyPressed = function(value, action){
-            $scope.reset();
-            $scope.searchModel.ShopCategory = value;
+            if (action === 'clear') {
+                $scope.reset();
+            } else {
+                $scope.searchModel.ShopCategory = value;
+            }
         };
         $scope.floorKeyPressed = function(value, action){
             if(action ==='del'){

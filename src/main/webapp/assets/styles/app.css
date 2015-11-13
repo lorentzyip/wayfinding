@@ -410,15 +410,13 @@ div {
 }
 
 /*for tabs*/
-.md-tab{
-    text-transform: none
-}
+
 #tenant-search-result-container {
     position: absolute;
     width: 618px;
     top: 5px;
     left: 5px;
-    bottom: 310px;
+    bottom: 258px;
     border: 0;
     background-color: rgba(255,255,255,0.3);
     color: black;
@@ -461,16 +459,19 @@ div {
     bottom: 5px;
     left: 5px;
     width: 618px;
-    height: 300px;
+    height: 248px;
     border: 0;
     background-color: rgba(255,255,255,0.3);
     color: white;
     border-radius: 5px;
 }
 
-.md-primary {
-    background-color: transparent;
+.md-tab {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: none;
 }
+
 .tenant-search-Tabs md-tab-content {
     padding: 25px;
 }
@@ -487,50 +488,72 @@ div {
 /*for tabs end*/
 
 /*for keyboard*/
-.text-keyboard-button{
-    background-color: #0f5b9c;
-    color: #FFF;
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    line-height: 25px;
-    text-align: center;
-    margin-left: 5px;
-    border-radius: 3px;
-    border: solid 1px white;
+.keyboard-row {
+    margin-top: 2px;
 }
+
+.readonly-input {
+    font-size: 20px;
+    height: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.text-keyboard-button {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.text-keyboard-button.double {
+    width: 92px;
+}
+
 .category-keyboard-button{
-    background-color: #66FFFF;
-    display: inline-block;
-    width: 150px;
-    height: 80px;
-    line-height: 25px;
-    text-align: center;
-    margin-left: 5px;
-    border-radius: 3px;
-    border: solid 1px white;
+    width: 152px;
+    height: 65px;
+    line-height: 65px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    font-size: 16px;
 }
 .floor-keyboard-button{
-    background-color: #66FFFF;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.floor-keyboard-button.double {
+    width: 92px;
+}
+
+.text-keyboard-button,
+.category-keyboard-button,
+.floor-keyboard-button {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 25px;
-    text-align: center;
-    margin-left: 5px;
-    border-radius: 3px;
+    color: #FFF;
+    outline: none;
     border: solid 1px white;
+    text-align: center;
+    background-color: #0f5b9c;
+}
+
+.text-keyboard-button:active,
+.category-keyboard-button:active,
+.floor-keyboard-button:active {
+    background-color: #083e6b;
 }
 
 .keyboard-container{
     display: inline-block;
-    text-align: center;
-}
-
-.keyboard-container ul{
-    padding-left: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    text-align: left;
 }
 
 .tenant-details-container #footer-buttons {

@@ -41,19 +41,19 @@
                 </md-list>
             </div>
             <div id="tenant-search-tabs-container">
-                <md-content class="md-padding" md-align="bottom">
-                    <md-tabs class="md-primary" md-selected="tabs.selectedIndex" md-align-tabs="bottom">
+                <md-content style="background:transparent;" md-align="bottom">
+                    <md-tabs class="md-primary" md-selected="tabs.selectedIndex" md-align-tabs="bottom" md-stretch-tabs="always">
                         <md-tab id="byTenant">
                             <md-tab-label ng-click="reset()">By Tenant</md-tab-label>
                             <md-tab-body>
-                                <input ng-model="searchModel.Nameen_us" type="text" search-text="" class="form-control" />
+                                <input readonly ng-model="searchModel.Nameen_us" type="text" search-text="" class="form-control readonly-input" />
                                 <div>
                                     <div class="keyboard-container">
-                                        <ul ng-repeat="row in searchByTenantKeyboardLayout" style="list-style-type: none;">
-                                            <li ng-repeat="element in row.row" class="text-keyboard-button" ng-click="textKeyPressed(element.value, element.action)">
+                                        <div ng-repeat="row in searchByTenantKeyboardLayout" class="keyboard-row">
+                                            <div ng-repeat="element in row.row" class="text-keyboard-button" ng-class="{double: element.value == 'CLEAR'}" ng-click="textKeyPressed(element.value, element.action)">
                                                 {{element.description}}
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </md-tab-body>
@@ -64,11 +64,11 @@
                                 <input ng-model="searchModel.ShopCategory" type="text" search-category="" hidden/>
                                 <div>
                                     <div class="keyboard-container">
-                                        <ul ng-repeat="row in searchByCategoryKeyboardLayout" style="list-style-type: none;">
-                                            <li ng-repeat="element in row.row" class="category-keyboard-button" ng-click="categoryKeyPressed(element.value, element.action)">
+                                        <div ng-repeat="row in searchByCategoryKeyboardLayout" class="keyboard-row">
+                                            <div ng-repeat="element in row.row" class="category-keyboard-button" ng-click="categoryKeyPressed(element.value, element.action)">
                                                 {{element.description}}
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </md-tab-body>
@@ -76,14 +76,14 @@
                         <md-tab id="byFloor">
                             <md-tab-label>By Floor</md-tab-label>
                             <md-tab-body>
-                                <input ng-model="searchModel.RoomNO" type="text" search-floor="" />
+                                <input readonly ng-model="searchModel.RoomNO" type="text" search-floor="" class="form-control readonly-input" />
                                 <div>
                                     <div class="keyboard-container">
-                                        <ul ng-repeat="row in searchByFloorKeyboardLayout" style="list-style-type: none;">
-                                            <li ng-repeat="element in row.row" class="floor-keyboard-button" ng-click="floorKeyPressed(element.value, element.action)">
+                                        <div ng-repeat="row in searchByFloorKeyboardLayout" class="keyboard-row">
+                                            <div ng-repeat="element in row.row" class="floor-keyboard-button" ng-class="{double: element.value == 'CLEAR'}" ng-click="floorKeyPressed(element.value, element.action)">
                                                 {{element.description}}
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </md-tab-body>

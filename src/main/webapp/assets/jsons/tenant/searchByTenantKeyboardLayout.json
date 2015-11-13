@@ -190,13 +190,13 @@
                 "action": "char"
             },
             {
-                "value": "←",
-                "description": "←",
+                "value": "⌫",
+                "description": "⌫",
                 "action": "del"
             },
             {
-                "value": "Clear",
-                "description": "Clear",
+                "value": "CLEAR",
+                "description": "CLEAR",
                 "action": "clear"
             }
         ]

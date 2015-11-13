@@ -65,15 +65,19 @@
                 "value": "0",
                 "description": "0",
                 "action": "char"
-            },
-            {
-                "value": "←",
-                "description": "←",
+            }
+        ]
+    },
+    {
+        "row": [
+             {
+                "value": "⌫",
+                "description": "⌫",
                 "action": "del"
             },
             {
-                "value": "Clear",
-                "description": "Clear",
+                "value": "CLEAR",
+                "description": "CLEAR",
                 "action": "clear"
             }
         ]

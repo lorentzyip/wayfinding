@@ -25,6 +25,11 @@
                 "value": "10",
                 "description": "Commercial",
                 "action": "cat"
+            },
+            {
+                "value": "0",
+                "description": "All",
+                "action": "clear"
             }
         ]
     }
