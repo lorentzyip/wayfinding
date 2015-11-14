@@ -50,7 +50,7 @@
                                 <div>
                                     <div class="keyboard-container">
                                         <div ng-repeat="row in searchByTenantKeyboardLayout" class="keyboard-row">
-                                            <div ng-repeat="element in row.row" class="text-keyboard-button" ng-class="{double: element.value == 'CLEAR'}" ng-click="textKeyPressed(element.value, element.action)">
+                                            <div ng-repeat="element in row.row" class="text-keyboard-button" ng-class="{double: element.action == 'clear', backspace: element.action == 'del'}" ng-click="textKeyPressed(element.value, element.action)">
                                                 {{element.description}}
                                             </div>
                                         </div>
@@ -80,7 +80,7 @@
                                 <div>
                                     <div class="keyboard-container">
                                         <div ng-repeat="row in searchByFloorKeyboardLayout" class="keyboard-row">
-                                            <div ng-repeat="element in row.row" class="floor-keyboard-button" ng-class="{double: element.value == 'CLEAR'}" ng-click="floorKeyPressed(element.value, element.action)">
+                                            <div ng-repeat="element in row.row" class="floor-keyboard-button" ng-class="{double: element.action == 'clear', backspace: element.action == 'del'}" ng-click="floorKeyPressed(element.value, element.action)">
                                                 {{element.description}}
                                             </div>
                                         </div>

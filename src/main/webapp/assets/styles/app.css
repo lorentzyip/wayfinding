@@ -509,7 +509,8 @@ div {
     margin-left: 2px;
 }
 
-.text-keyboard-button.double {
+.text-keyboard-button.double,
+.floor-keyboard-button.double {
     width: 92px;
 }
 
@@ -530,8 +531,9 @@ div {
     margin-left: 2px;
 }
 
-.floor-keyboard-button.double {
-    width: 92px;
+.text-keyboard-button.backspace,
+.floor-keyboard-button.backspace {
+    font-family: Segoe UI Symbol;
 }
 
 .text-keyboard-button,
