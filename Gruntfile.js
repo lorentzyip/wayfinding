@@ -127,8 +127,8 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/**/*.js',
                         '<%= yeoman.dist %>/assets/styles/**/*.css',
-                        '<%= yeoman.dist %>/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-                        '<%= yeoman.dist %>/assets/fonts/*'
+                        //'<%= yeoman.dist %>/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+                        //'<%= yeoman.dist %>/assets/fonts/*'
                     ]
                 }
             }
@@ -153,7 +153,8 @@ module.exports = function (grunt) {
             css: ['<%= yeoman.dist %>/assets/styles/**/*.css'],
             js: ['<%= yeoman.dist %>/scripts/**/*.js'],
             options: {
-                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/assets/styles', '<%= yeoman.dist %>/assets/images', '<%= yeoman.dist %>/assets/fonts'],
+                //assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/assets/styles', '<%= yeoman.dist %>/assets/images', '<%= yeoman.dist %>/assets/fonts'],
+                assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/assets/styles'],
                 patterns: {
                     js: [
                         [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
@@ -227,9 +228,44 @@ module.exports = function (grunt) {
                     dot: true,
                     flatten: true,
                     cwd: 'src/main/webapp',
-                    dest: '<%= yeoman.dist %>/assets/fonts',
+                    dest: '<%= yeoman.dist %>/assets/fonts/',
                     src: [
                       'bower_components/bootstrap/fonts/*.*'
+                    ]
+                }]
+            },
+            font: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    flatten: true,
+                    cwd: 'src/main/webapp',
+                    dest: '<%= yeoman.dist %>/assets/font/',
+                    src: [
+                        'assets/fonts/*.*'
+                    ]
+                }]
+            },
+            slick: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: 'src/main/webapp/bower_components/slick-carousel/slick',
+                    dest: '<%= yeoman.dist %>/assets/styles',
+                    src: [
+                        'fonts/*',
+                        '*.gif'
+                    ]
+                }]
+            },
+            json: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: 'src/main/webapp',
+                    dest: '<%= yeoman.dist %>',
+                    src: [
+                        'assets/jsons/**'
                     ]
                 }]
             },
@@ -243,7 +279,7 @@ module.exports = function (grunt) {
                         '*.html',
                         'scripts/**/*.html',
                         'assets/images/**/*.{png,gif,webp,jpg,jpeg,svg}',
-                        'assets/fonts/*'
+                        'assets/fonts/**'
                     ]
                 }, {
                     expand: true,
@@ -347,10 +383,13 @@ module.exports = function (grunt) {
         'ngconstant:prod',
         'useminPrepare',
         'ngtemplates',
-        'imagemin',
-        'svgmin',
+        //'imagemin',
+        //'svgmin',
         'concat',
         'copy:fonts',
+        'copy:font',
+        'copy:slick',
+        'copy:json',
         'copy:dist',
         'ngAnnotate',
         'cssmin',

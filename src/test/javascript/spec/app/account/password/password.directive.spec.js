@@ -20,6 +20,7 @@ describe('Directive Tests ', function () {
         $httpBackend.whenGET('scripts/app/touch/cover/cover.html').respond({});
         $httpBackend.whenGET('scripts/components/navbar/navbar.html').respond({});
         var globalJson = new RegExp('i18n\/.*\/global.json')
+        var globalJson = new RegExp('i18n\/.*\/mainselection.json')
         var mainJson = new RegExp('i18n\/.*\/main.json');
         $httpBackend.whenGET(globalJson).respond({});
         $httpBackend.whenGET(mainJson).respond({});
