@@ -757,22 +757,25 @@ img {
 }
 
 .apartment-images .slick-prev, .apartment-images .slick-next {
-    width: 80px;
-    height: 80px;
-    margin-top: -40px;
+    background-size: 23px 41px;
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 41px;
+    transform: translate(0, -50%);
 }
 
 .apartment-images .slick-prev {
-    left: -85px;
+    background-image: url("../images/arrow-left.png");
+    left: -60px;
 }
 
 .apartment-images .slick-next {
-    right: -85px;
+    background-image: url("../images/arrow-right.png");
+    right: -60px;
 }
 
 .apartment-images .slick-prev:before, .apartment-images .slick-next:before {
-    line-height: 80px;
-    font-size: 80px;
+    content: "";
 }
 
 .apartment-images .slick-dots {
