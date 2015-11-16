@@ -3,7 +3,7 @@
 		Nearby
 	</div>
 	<div id="nearby-slider-container">
-		<slick arrows="true" infinite="true" slides-to-show="{{ nearby.length < 5 ? nearby.length : 5 }}" swipe-to-slide="true" dots="true" init-onload="true" data="nearby">
+		<slick arrows="true" infinite="true" slides-to-show="{{ nearby.length < 5 ? nearby.length : 5 }}" swipe-to-slide="true" dots="true" init-onload="true" data="nearby" ng-cloak>
 			<div ng-repeat="spot in nearby" class="spot-container">
 				<img ng-src="{{ spot.imageUrl }}" class="reflect" ng-click="showSpotDetails(spot.id)">
 			</div>

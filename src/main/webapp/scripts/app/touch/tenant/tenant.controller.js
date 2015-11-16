@@ -69,6 +69,12 @@ angular.module('wayfindingApp')
             for (var i = 0; i < $scope.tenants.length; i++) {
                 $scope.tenants[i].firstEnLetter = $scope.tenants[i].Nameen_us.substring(0,1).toUpperCase();
             }
+            $scope.tenants = $scope.tenants.sort(function(a, b) {
+               var nameA = a.Nameen_us.toLowerCase(), nameB = b.Nameen_us.toLowerCase();
+               if (nameA < nameB) return -1;
+               else if (nameA > nameB) return 1;
+               else return 0; 
+            });
         });
         
         $http.get('assets/jsons/tenant/Cate_Infor.json').success(function(data) {
@@ -107,9 +113,14 @@ angular.module('wayfindingApp')
             ShopCategory : ''
         };
         
+        $scope.startsWith = function(actual, expected) {
+            var lowerStr = (actual + '').toLowerCase();
+            return lowerStr.indexOf(expected.toLowerCase()) === 0;
+        }
+        
         $scope.textKeyPressed = function(value, action){
             if(action ==='del'){
-                $scope.searchModel.Nameen_us = $scope.searchModel.Nameen_us.substr(0, $scope.searchModel.Nameen_us.length-1)
+                $scope.searchModel.Nameen_us = $scope.searchModel.Nameen_us.substr(0, $scope.searchModel.Nameen_us.length-1);
             }else if(action ==='clear'){
                 $scope.reset();
             }
@@ -127,12 +138,15 @@ angular.module('wayfindingApp')
         };
         
         $scope.floorKeyPressed = function(value, action){
-            if(action ==='del'){
-                $scope.searchModel.RoomNO = $scope.searchModel.RoomNO.substr(0, $scope.searchModel.RoomNO.length-1)
-            }else if(action ==='clear'){
+            if (action === 'del') {
+                /* $scope.searchModel.RoomNO = $scope.searchModel.RoomNO.substr(0, $scope.searchModel.RoomNO.length-1) */
+                $scope.searchModel.floor = $scope.searchModel.floor.substr(0, $scope.searchModel.floor.length - 1);
+            } else if (action === 'clear') {
                 $scope.reset();
-            }else{
-                $scope.searchModel.RoomNO = $scope.searchModel.RoomNO + value;
+            } else {
+                /* $scope.searchModel.RoomNO = $scope.searchModel.RoomNO + value; */
+                if ($scope.searchModel.floor.length < 3)
+                    $scope.searchModel.floor = $scope.searchModel.floor + value;
             }
         };
         
@@ -149,6 +163,7 @@ angular.module('wayfindingApp')
             $scope.selectedFloor = -1;
             $scope.searchModel.Nameen_us = '';
             $scope.searchModel.RoomNO = '';
+            $scope.searchModel.floor = '';
             $scope.searchModel.ShopCategory = '';
         };
         

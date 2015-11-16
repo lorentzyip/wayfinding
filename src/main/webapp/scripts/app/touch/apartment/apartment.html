@@ -7,12 +7,12 @@
 			<div class="building-image">
 			</div>
 			<div class="building-sections">
-				<div class="building-section" ng-repeat="section in buildingSections" ng-style="{ top: section.offsetY }">
+				<div class="building-section" ng-repeat="section in buildingSections" ng-style="{ top: section.offsetY }" ng-cloak>
 					{{ language == 'en'? section.descriptionEn : section.descriptionZhCN }}
 				</div>
 			</div>
 			<div class="building-floors">
-				<div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === currentApartment.floor, ground: floor === 0 }" floor="{{ floor === 0? 'G' : floor }}">
+				<div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === currentApartment.floor, ground: floor === 0 }" floor="{{ floor === 0? 'G' : floor }}" ng-cloak>
 				</div>
 			</div>
 		</div>
@@ -21,7 +21,7 @@
 				<slick arrows="true" dots="true" current-index="apartmentIndex" init-onload="true" data="apartments">
 					<div ng-repeat="apartment in apartments">
 						<img ng-src="{{ apartment.imageUrl }}">
-						<div class="apartment-description">{{ language === 'zh-cn' ? apartment.descriptionCN : apartment.descriptionEN }}</div>
+						<div class="apartment-description" ng-cloak>{{ language === 'zh-cn' ? apartment.descriptionCN : apartment.descriptionEN }}</div>
 					</div>
 				</slick>
 			</div>
