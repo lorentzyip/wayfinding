@@ -6,13 +6,18 @@
         <div class="building-container">
             <div class="building-image">
             </div>
+            <div class="building-sections">
+				<div class="building-section" ng-repeat="section in buildingSections" ng-style="{ top: section.offsetY }">
+					{{ language == 'en'? section.descriptionEn : section.descriptionZhCN }}
+				</div>
+			</div>
             <div class="building-floors">
                 <div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === selectedFloor, ground: floor === 0}" floor="{{ floor === 0? 'G' : floor }}">
                 </div>
             </div>
         </div>
         <div class="tenant-map-container">
-            <div class="from-map-container">
+            <div class="from-map-container" ng-class="{'scale-up': !tenantSelected, 'scale-down': tenantSelected}">
                 <img ng-src="assets/images/floor-plan/0.png">
             </div>
             <div ng-repeat="floorPlan in floorPlans" class="to-map-container" ng-if="showFloorPlan(floorPlan.floorNum)">
@@ -34,7 +39,6 @@
                 <md-list ng-ng-cloak>
                     <md-list-item class="tenant-list-item" ng-repeat="tenant in tenants | filter:searchModel | orderBy:'Nameen_us'" ng-click="selectTenant(tenant)">
                         <!--<p class="tenant-detail-icon" ng-src="{{ tenant.img }}"> </p>-->
-                        <!--<p class="tenant-name">{{ language == 'en' ? tenant.Nameen_us : tenant.Namezh_cn }}</p>-->
                         <div class="tenant-name">{{ language === 'en' ? tenant.Nameen_us : tenant.Namezh_cn }}</div>
                         <div class="tenant-location">{{ tenant.RoomNO }}</div>
                     </md-list-item>
@@ -76,7 +80,7 @@
                                             {{ language === 'en' ?  category.FaciltiyDescriptionen_us : category.FaciltiyDescriptionzh_cn }}
                                         </div>
                                         <div class="category-keyboard-button" ng-click="categoryKeyPressed('all', 'clear')">
-                                            All
+                                            {{ 'tenant-keyboard.keys.ALL' | translate }}
                                         </div>
                                     </div>
                                 </div>

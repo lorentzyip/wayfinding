@@ -279,6 +279,7 @@ div {
 }
 
 .building-container {
+    position: relative;
     width: 347px;
     height: 100%;
     float: left;
@@ -294,6 +295,23 @@ div {
     margin-left: 20px;
     width: 250px;
     height: 675px;
+}
+
+.building-sections {
+    position: absolute;
+    top: 75px;
+    left: 160px;
+}
+
+.building-section {
+    position: absolute;
+    font-size: 10px;
+    color: #105c9c;
+    line-height: 10px;
+    height: 10px;
+    width: 100px;
+    transform: translateY(-5px);
+    text-align: left;
 }
 
 .building-floors {
@@ -312,12 +330,23 @@ div {
     text-align: center;
 }
 
+.slick-popup,
 .apartment-images {
     margin-top: 10px;
     margin-left: 91px;
     width: 1366px;
     height: 768px;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.slick-popup {
+    position: fixed;
+}
+
+.slick-popup img {
+    width: 1366px;
+    height: 768px;
+    display: block;
 }
 
 .apartment-images img {
@@ -327,6 +356,7 @@ div {
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 
+.slick-popup .slick-slide,
 .apartment-images .slick-slide {
     position: relative;
 }
@@ -353,19 +383,41 @@ div {
     background-color: rgba(255,255,255,0.4);
 }
 
-.from-map-container {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
+.from-map-container.scale-up, .from-map-container.scale-down {
+    transition: 0.5s ease;
 }
 
-.from-map-container img, .to-map-container img {
-    width: 500px;
-    height: 500px;
+.from-map-container.scale-up {
+    transform: translate(57px, -7px) scale(2);
+}
+
+.from-map-container.scale-down {
+    transform: scale(1);
+}
+
+.from-map-container {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 0;
+    bottom: 0;
+    transform-origin: left bottom;
+}
+
+.from-map-container img {
+    width: 400px;
+    height: 400px;
+}
+
+.to-map-container img {
+    width: 600px;
+    height: 600px;
 }
 
 .to-map-container {
     position: absolute;
+    width: 600px;
+    height: 600px;
     right: 0px;
     top: 0px;
 }
@@ -436,6 +488,10 @@ div {
     border-bottom: 1px solid #000;
 }
 
+.tenant-list-item button {
+    padding: 0px 10px;
+} 
+
 .tenant-name,
 .tenant-location {
     font-weight: bold;
@@ -443,13 +499,13 @@ div {
 }
 
 .tenant-name {
-     width: 80%;
+     width: 85%;
      /* height: 50px; */
      border: 0;
      padding: 5px;
  }
 .tenant-location {
-    width: 20%;
+    width: 15%;
     /* height: 50px; */
     border: 0;
     padding: 5px;
@@ -629,25 +685,6 @@ div {
     -webkit-box-reflect : below 0 -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255,0.3)), color-stop(0.3, transparent));
 }
 
-/*
-.slick-popup {
-    width: 1366px;
-    height: 768px;
-}
-*/
-
-.single-promotion-container, .single-facility-container, .single-spot-container {
-    width: 1366px;
-    height: 768px;
-}
-
-.single-promotion-container img, .single-facility-container img, .single-spot-container img {
-    width: 1366px;
-    height: 768px;
-    margin: auto;
-    display: block;
-}
-
 .selection-frame {
     position: absolute;
     top: 0;
@@ -711,7 +748,7 @@ div {
     transition: all 0.5s ease;
 }
 .to-map-container.ng-enter {
-    right: -500px;     /*initial css for view transition in*/
+    right: -600px;     /*initial css for view transition in*/
     opacity: 0;
 }
 .to-map-container.ng-leave {
@@ -723,7 +760,7 @@ div {
     opacity: 1;
 }
 .to-map-container.ng-leave-active {
-    right: 500px;    /*final css for view transition out*/
+    right: 600px;    /*final css for view transition out*/
     opacity: 0;
 }
 
@@ -736,10 +773,7 @@ img {
     outline: none;
 }
 
-.slick-popup .slick-dots li button:before {
-    font-size: 14px;
-}
-
+.slick-popup .slick-dots li button:before,
 .apartment-images .slick-dots li button:before {
     content: '■';
     font-size: 16px;
@@ -747,6 +781,7 @@ img {
     opacity: 1;
 }
 
+.slick-popup .slick-dots li.slick-active button:before,
 .apartment-images .slick-dots li.slick-active button:before {
     color: #2F76B3;
     opacity: 1;
@@ -757,7 +792,16 @@ img {
     1px 1px 0 #FFF;
 }
 
-.apartment-images .slick-prev, .apartment-images .slick-next {
+#promotions-slider-container .slick-prev,
+#promotions-slider-container .slick-next,
+#facilities-slider-container .slick-prev,
+#facilities-slider-container .slick-next,
+#nearby-slider-container .slick-prev,
+#nearby-slider-container .slick-next,
+.slick-popup .slick-prev,
+.slick-popup .slick-next,
+.apartment-images .slick-prev,
+.apartment-images .slick-next {
     background-size: 23px 41px;
     background-repeat: no-repeat;
     width: 23px;
@@ -765,20 +809,46 @@ img {
     transform: translate(0, -50%);
 }
 
+#promotions-slider-container .slick-prev,
+#facilities-slider-container .slick-prev,
+#nearby-slider-container .slick-prev {
+    background-image: url("../images/arrow-left.png");
+    left: 20px;
+}
+
+#promotions-slider-container .slick-next,
+#facilities-slider-container .slick-next,
+#nearby-slider-container .slick-next {
+    background-image: url("../images/arrow-right.png");
+    right: 20px;
+}
+
+.slick-popup .slick-prev,
 .apartment-images .slick-prev {
     background-image: url("../images/arrow-left.png");
     left: -60px;
 }
 
+.slick-popup .slick-next,
 .apartment-images .slick-next {
     background-image: url("../images/arrow-right.png");
     right: -60px;
 }
 
-.apartment-images .slick-prev:before, .apartment-images .slick-next:before {
+#promotions-slider-container .slick-prev:before,
+#promotions-slider-container .slick-next:before,
+#facilities-slider-container .slick-prev:before,
+#facilities-slider-container .slick-next:before,
+#nearby-slider-container .slick-prev:before,
+#nearby-slider-container .slick-next:before,
+.slick-popup .slick-prev:before,
+.slick-popup .slick-next:before,
+.apartment-images .slick-prev:before,
+.apartment-images .slick-next:before {
     content: "";
 }
 
+.slick-popup .slick-dots,
 .apartment-images .slick-dots {
     bottom: -36px;
 }

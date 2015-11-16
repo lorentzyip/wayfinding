@@ -55,7 +55,7 @@
 }
 
 .ngdialog.ngdialog-theme-custom {
-  padding-top: 160px;
+  padding-top: 145px;
 }
 
 .ngdialog.ngdialog-theme-custom.ngdialog-closing .ngdialog-content {
@@ -66,18 +66,16 @@
 .ngdialog.ngdialog-theme-custom .ngdialog-content {
   -webkit-animation: ngdialog-flyin .5s;
   animation: ngdialog-flyin .5s;
-  background: white;
-  border-radius: 5px;
+  background: rgba(255,255,255,0.5);
   color: #444;
   font-family: 'Helvetica',sans-serif;
   font-size: 1.1em;
   line-height: 1.5em;
   margin: 0 auto;
   max-width: 100%;
-  padding: 10px;
   position: relative;
-  width: 1386px;
-  height: 820px;
+  width: 1548px;
+  height: 814px;
 }
 
 .ngdialog {

@@ -1,0 +1,74 @@
+{
+	"sections": [
+		{
+			"id": 1,
+			"name": "a",
+			"descriptionEn": "1F-12F offices",
+			"descriptionZhCN": "1F-12F 办公",
+			"offsetY": "600px"
+		},
+		{
+			"id": 2,
+			"name": "b",
+			"descriptionEn": "13F offices",
+			"descriptionZhCN": "13F 办公",
+			"offsetY": "521px"
+		},
+		{
+			"id": 3,
+			"name": "c",
+			"descriptionEn": "14F offices",
+			"descriptionZhCN": "14F 办公",
+			"offsetY": "510px"
+		},
+		{
+			"id": 4,
+			"name": "d",
+			"descriptionEn": "15F offices",
+			"descriptionZhCN": "15F 办公",
+			"offsetY": "498px"
+		},
+		{
+			"id": 5,
+			"name": "e",
+			"descriptionEn": "16F-29F offices",
+			"descriptionZhCN": "16F-29F 办公",
+			"offsetY": "412px"
+		},
+		{
+			"id": 6,
+			"name": "f",
+			"descriptionEn": "30F offices",
+			"descriptionZhCN": "30F 办公",
+			"offsetY": "326px"
+		},
+		{
+			"id": 7,
+			"name": "g",
+			"descriptionEn": "31F-41F offices",
+			"descriptionZhCN": "31F-41F 办公",
+			"offsetY": "257px"
+		},
+		{
+			"id": 8,
+			"name": "h",
+			"descriptionEn": "42F offices",
+			"descriptionZhCN": "42F 办公",
+			"offsetY": "189px"
+		},
+		{
+			"id": 9,
+			"name": "i",
+			"descriptionEn": "43F-52F offices",
+			"descriptionZhCN": "43F-52F 办公",
+			"offsetY": "123px"
+		},
+		{
+			"id": 10,
+			"name": "j",
+			"descriptionEn": "53F-58F offices",
+			"descriptionZhCN": "53F-58F 办公",
+			"offsetY": "33px"
+		}
+	]
+}

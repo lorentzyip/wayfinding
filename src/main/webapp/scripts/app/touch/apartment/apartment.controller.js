@@ -18,6 +18,9 @@ angular.module('wayfindingApp')
             $scope.apartments = data;
 			$scope.currentApartment = data[0];
         });
+		$http.get('assets/jsons/building.json').success(function(data) {
+			$scope.buildingSections = data.sections;
+		});
 		$scope.apartmentIndex = 0;
 	};
 	

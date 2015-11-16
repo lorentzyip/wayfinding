@@ -142,6 +142,8 @@ angular.module('wayfindingApp')
         };
         
         $scope.reset = function(){
+            $scope.tenantSelected = null;
+            $scope.selectedFloor = -1;
             $scope.searchModel.Nameen_us = '';
             $scope.searchModel.RoomNO = '';
             $scope.searchModel.ShopCategory = '';
@@ -197,7 +199,11 @@ angular.module('wayfindingApp')
         };
 
         var init = function() {
+            $translate.use($rootScope.language);
             $scope.floors = createFloor(58);
+            $http.get('assets/jsons/building.json').success(function(data) {
+                $scope.buildingSections = data.sections;
+            });
         };
 
         init();
