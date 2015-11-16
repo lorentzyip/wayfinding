@@ -7,7 +7,7 @@
             <div class="building-image">
             </div>
             <div class="building-floors">
-                <div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === selectedFloor, ground: floor === 0}" floor="{{ floor === 0? 'G' : 'L' + floor }}">
+                <div ng-repeat="floor in floors" class="dot" ng-class="{active: floor === selectedFloor, ground: floor === 0}" floor="{{ floor === 0? 'G' : floor }}">
                 </div>
             </div>
         </div>
@@ -44,14 +44,15 @@
                 <md-content style="background:transparent;" md-align="bottom">
                     <md-tabs class="md-primary" md-selected="tabs.selectedIndex" md-align-tabs="bottom" md-stretch-tabs="always">
                         <md-tab id="byTenant">
-                            <md-tab-label ng-click="reset()">By Tenant</md-tab-label>
+                            <md-tab-label ng-click="reset()">{{ 'tenant-keyboard.searchBy.tenant' | translate }}</md-tab-label>
                             <md-tab-body>
                                 <input readonly ng-model="searchModel.Nameen_us" type="text" search-text="" class="form-control readonly-input" />
                                 <div>
                                     <div class="keyboard-container">
                                         <div ng-repeat="row in searchByTenantKeyboardLayout" class="keyboard-row">
                                             <div ng-repeat="element in row.row" class="text-keyboard-button" ng-class="{double: element.action == 'clear', backspace: element.action == 'del'}" ng-click="textKeyPressed(element.value, element.action)">
-                                                {{element.description}}
+                                                <!-- {{element.description}} -->
+                                                {{ 'tenant-keyboard.keys.' + element.value | translate }}
                                             </div>
                                         </div>
                                     </div>
@@ -59,29 +60,37 @@
                             </md-tab-body>
                         </md-tab>
                         <md-tab id="byCategory">
-                            <md-tab-label>By Category</md-tab-label>
+                            <md-tab-label>{{ 'tenant-keyboard.searchBy.category' | translate }}</md-tab-label>
                             <md-tab-body>
                                 <input ng-model="searchModel.ShopCategory" type="text" search-category="" hidden/>
                                 <div>
                                     <div class="keyboard-container">
+                                        <!--
                                         <div ng-repeat="row in searchByCategoryKeyboardLayout" class="keyboard-row">
                                             <div ng-repeat="element in row.row" class="category-keyboard-button" ng-click="categoryKeyPressed(element.value, element.action)">
                                                 {{element.description}}
                                             </div>
+                                        </div>
+                                        -->
+                                        <div ng-repeat="category in categories" class="category-keyboard-button" ng-click="categoryKeyPressed(category.FaciltiyNumber, 'filter')">
+                                            {{ language === 'en' ?  category.FaciltiyDescriptionen_us : category.FaciltiyDescriptionzh_cn }}
+                                        </div>
+                                        <div class="category-keyboard-button" ng-click="categoryKeyPressed('all', 'clear')">
+                                            All
                                         </div>
                                     </div>
                                 </div>
                             </md-tab-body>
                         </md-tab>
                         <md-tab id="byFloor">
-                            <md-tab-label>By Floor</md-tab-label>
+                            <md-tab-label>{{ 'tenant-keyboard.searchBy.floor' | translate }}</md-tab-label>
                             <md-tab-body>
                                 <input readonly ng-model="searchModel.RoomNO" type="text" search-floor="" class="form-control readonly-input" />
                                 <div>
                                     <div class="keyboard-container">
                                         <div ng-repeat="row in searchByFloorKeyboardLayout" class="keyboard-row">
                                             <div ng-repeat="element in row.row" class="floor-keyboard-button" ng-class="{double: element.action == 'clear', backspace: element.action == 'del'}" ng-click="floorKeyPressed(element.value, element.action)">
-                                                {{element.description}}
+                                                {{ 'tenant-keyboard.keys.' + element.value | translate }}
                                             </div>
                                         </div>
                                     </div>

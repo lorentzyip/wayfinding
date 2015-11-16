@@ -1,10 +1,10 @@
 {
     "mainselection": {
         "title": "选项",
-        "tenant": "搜寻商户",
-        "apartment": "服务式住宅",
-        "promotions": "最新优惠",
-        "facilities": "大厦设施",
-        "nearby": "附近热点"
+        "tenant": "公司查找",
+        "apartment": "雅诗阁酒店",
+        "promotions": "广告推广",
+        "facilities": "云蝠集团",
+        "nearby": "附近信息"
     }
 }

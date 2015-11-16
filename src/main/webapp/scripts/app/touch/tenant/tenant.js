@@ -25,6 +25,7 @@ angular.module('wayfindingApp')
                         $translatePartialLoader.addPart('tenant');
                         $translatePartialLoader.addPart('global');
                         $translatePartialLoader.addPart('mainselection');
+                        $translatePartialLoader.addPart('tenant.keyboard');
                         return $translate.refresh();
                     }]
                 }

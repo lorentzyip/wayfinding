@@ -516,11 +516,12 @@ div {
 
 .category-keyboard-button{
     width: 152px;
-    height: 65px;
-    line-height: 65px;
+    height: 64px;
+    line-height: 64px;
     margin-left: 2px;
-    margin-bottom: 2px;
     font-size: 16px;
+    font-weight: bold;
+    margin-top: 2px;
 }
 .floor-keyboard-button{
     width: 45px;

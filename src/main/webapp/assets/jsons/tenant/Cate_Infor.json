@@ -1,0 +1,100 @@
+{
+	"Cate_Infor": [
+		{
+			"id": 1,
+			"FaciltiyNumber": "10",
+			"FaciltiyDescriptionzh_cn": "F10中文",
+			"FaciltiyDescriptionen_us": "F10",
+			"sortid": "1",
+			"guid": "29d9b807-316d-4225-98d2-91ff2df67cd8",
+			"createid": 38,
+			"createtime": "2015-10-27T13:14:29.663",
+			"modifyid": 38,
+			"modifytime": "2015-10-27T13:14:37.74"
+		},
+		{
+			"id": 2,
+			"FaciltiyNumber": "20",
+			"FaciltiyDescriptionzh_cn": "F20中文",
+			"FaciltiyDescriptionen_us": "F20",
+			"sortid": null,
+			"guid": "c37f168a-ebd9-42e2-8ff9-fe1806a31153",
+			"createid": 0,
+			"createtime": "2015-10-27T20:36:07.657",
+			"modifyid": 0,
+			"modifytime": "2015-10-27T20:36:07.657"
+		},
+		{
+			"id": 3,
+			"FaciltiyNumber": "30",
+			"FaciltiyDescriptionzh_cn": "F30中文",
+			"FaciltiyDescriptionen_us": "F30",
+			"sortid": null,
+			"guid": "cd533cb9-cf88-4823-8edb-5d9377f5a55e",
+			"createid": 0,
+			"createtime": "2015-10-27T20:36:09.097",
+			"modifyid": 0,
+			"modifytime": "2015-10-27T20:36:09.097"
+		},
+		{
+			"id": 4,
+			"FaciltiyNumber": "40",
+			"FaciltiyDescriptionzh_cn": "F40中文",
+			"FaciltiyDescriptionen_us": "F40",
+			"sortid": null,
+			"guid": "9e55cafd-c6b2-4aa3-bfa7-d82004c8dfe6",
+			"createid": 0,
+			"createtime": "2015-10-27T20:36:10.5",
+			"modifyid": 0,
+			"modifytime": "2015-10-27T20:36:10.5"
+		},
+		{
+			"id": 5,
+			"FaciltiyNumber": "50",
+			"FaciltiyDescriptionzh_cn": "F50中文",
+			"FaciltiyDescriptionen_us": "F50",
+			"sortid": null,
+			"guid": "064d8c71-a8bc-46ff-88ab-04ce383faef3",
+			"createid": 0,
+			"createtime": "2015-10-27T20:36:11.87",
+			"modifyid": 0,
+			"modifytime": "2015-10-27T20:36:11.87"
+		},
+		{
+			"id": 6,
+			"FaciltiyNumber": "60",
+			"FaciltiyDescriptionzh_cn": "F60中文",
+			"FaciltiyDescriptionen_us": "F60",
+			"sortid": null,
+			"guid": "3e6d0b4a-2e8d-4d21-af4b-3b49f426ea09",
+			"createid": 0,
+			"createtime": "2015-10-27T20:36:13.077",
+			"modifyid": 0,
+			"modifytime": "2015-10-27T20:36:13.077"
+		},
+		{
+			"id": 7,
+			"FaciltiyNumber": "70",
+			"FaciltiyDescriptionzh_cn": "F70中文",
+			"FaciltiyDescriptionen_us": "F70",
+			"sortid": null,
+			"guid": "5acfb02a-a463-4ee9-ae60-83526c598434",
+			"createid": 0,
+			"createtime": "2015-10-27T20:36:14.493",
+			"modifyid": 0,
+			"modifytime": "2015-10-27T20:36:14.493"
+		},
+		{
+			"id": 8,
+			"FaciltiyNumber": "80",
+			"FaciltiyDescriptionzh_cn": "F80中文",
+			"FaciltiyDescriptionen_us": "F80",
+			"sortid": null,
+			"guid": "06d90c21-11c2-46db-86f4-bca7025fad04",
+			"createid": 0,
+			"createtime": "2015-10-27T20:36:19.033",
+			"modifyid": 0,
+			"modifytime": "2015-10-27T20:36:19.033"
+		}
+	]
+}
