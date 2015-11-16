@@ -484,8 +484,24 @@ div {
     padding: 0px;
 }
 
+.tenant-list-subheader {
+     margin: 0;
+     color: #FFF;
+     background-color: #105c9c;
+     text-align: left;
+ }
+ 
+.tenant-list-subheader .md-subheader-inner {
+    padding: 16px;
+}
+
+.tenant-list-subheader .md-subheader-inner .md-subheader-content {
+    font-weight: bold;
+    font-size: 16px;
+}
+
 .tenant-list-item {
-    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid #000; */
 }
 
 .tenant-list-item button {

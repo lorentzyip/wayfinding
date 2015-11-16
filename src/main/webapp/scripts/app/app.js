@@ -1,9 +1,8 @@
 'use strict';
 
 angular.module('wayfindingApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalprecht.translate',
-               'ui.bootstrap', // for modal dialogs
-               'ngDialog', 'ngIdle',
-    'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll', 'ngAnimate', 'slick', 'ngMaterial'])
+               'ui.bootstrap', 'ngDialog', 'ngIdle', 'angular.filter', 'ngResource', 'ui.router',
+               'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll', 'ngAnimate', 'slick', 'ngMaterial'])
 
     .run(function ($rootScope, $location, $window, $http, $state, $translate, Language, Auth, Principal, ENV, VERSION, Idle) {
         $rootScope.ENV = ENV;

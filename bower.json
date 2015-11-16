@@ -31,7 +31,8 @@
         "ng-dialog": "latest",
         "ng-idle": "latest",
         "weather-icons": "latest",
-        "angular-material": "0.11.4"
+        "angular-material": "0.11.4",
+        "angular-filter": "latest"
     },
     "devDependencies": {
         "angular-mocks": "1.4.5",

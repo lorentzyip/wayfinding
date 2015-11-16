@@ -66,6 +66,9 @@ angular.module('wayfindingApp')
 
         $http.get('assets/jsons/tenant/Tenant_Infor.json').success(function(data) {
             $scope.tenants = data.Tenant_Infor;
+            for (var i = 0; i < $scope.tenants.length; i++) {
+                $scope.tenants[i].firstEnLetter = $scope.tenants[i].Nameen_us.substring(0,1).toUpperCase();
+            }
         });
         
         $http.get('assets/jsons/tenant/Cate_Infor.json').success(function(data) {
@@ -147,6 +150,21 @@ angular.module('wayfindingApp')
             $scope.searchModel.Nameen_us = '';
             $scope.searchModel.RoomNO = '';
             $scope.searchModel.ShopCategory = '';
+        };
+        
+        $scope.getCategoryName = function(key) {
+            for (var i = 0; i < $scope.categories.length; i++) {
+                var category = $scope.categories[i];
+                if (category.FaciltiyNumber == key) {
+                    if ($rootScope.language == 'en') {
+                        return category.FaciltiyDescriptionen_us;
+                    } else {
+                        return category.FaciltiyDescriptionzh_cn;
+                    }
+                }
+            }  
+            
+            return null;
         };
         
         $scope.getRoomCoord = function(floorPlan, roomNumStr /* string */) {
